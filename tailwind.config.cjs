@@ -17,12 +17,34 @@ export default {
                 promoBgClr: "#0F0303",
                 footerBtnClr: "#1E1C1C",
                 hrClr: "#FFE7E7"
-            }
+            },
+            maxWidth: {
+                '8xl': '90rem',
+            },
         },
         fontFamily: {
             "rubik": ["rubik", "sans-serif"]
         },
 
+        keyframes: {
+            slideDown: {
+                "0%": {
+                    transform: "translateY(-100%)",
+                },
+                "100%": {
+                    transform: "translateY(0)",
+                },
+
+            },
+
+        },
+        animation: {
+            "slide-down": "slideDown .5s ease forwards",
+
+        },
+
     },
-    plugins: [],
+    plugins: [
+        require('tailwind-scrollbar'),
+    ],
 }
