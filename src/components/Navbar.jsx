@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { navLinks, logo, icons } from "../lib/Constants";
+import { navLinks, logo, icons, navTexts } from "../lib/Constants";
 import Sidebar from "./Sidebar";
 
 const Navbar = () => {
@@ -40,9 +40,9 @@ const Navbar = () => {
     <nav
       className={`${
         scrolled
-          ? "fixed top-0 w-full  bg-opacity-80 bg-featuredBgClr  backdrop-filter backdrop-blur-sm animate-slide-down border-b border-b-gray-700"
-          : "sticky top-0"
-      } px-4 py-1 md:px-6 text-white`}
+          ? "fixed top-0 w-full  bg-opacity-80 bg-featuredBgClr  backdrop-filter backdrop-blur-sm animate-slide-down border-b border-b-gray-700 z-10"
+          : "absolute top-0 w-full z-10"
+      } px-4 py-1.5 md:px-6 text-white`}
     >
       <div className="mx-auto px-4 py-1.5 flex flex-wrap items-center justify-between max-w-8xl">
         <div className="flex flex-row gap-3">
@@ -52,7 +52,7 @@ const Navbar = () => {
           <a href="#" className="flex items-center">
             <img
               src={logo[0].path}
-              className="mr-3 h-8 md:h-10"
+              className="mr-3 h-8 md:h-10 hidden min-[320px]:block"
               alt={logo[0].desc}
             />
           </a>
@@ -67,7 +67,7 @@ const Navbar = () => {
               href="#"
               className="mr-2 pl-1 pr-2 py-2 text-[0.65rem] md:text-xs font-bold tracking-wider"
             >
-              Login
+              {navTexts.login}
             </a>
           </button>
         </div>

@@ -65,13 +65,13 @@ export const navTexts = {
   closeMenu: "Close menu",
 };
 
-export const links = [
-  {
+export const links = {
+  github: {
     id: "github",
     icon: <FaGithub size={24} opacity={0.5} />,
     url: "https://github.com/Jakbor32/Soundy-web-react",
   },
-];
+};
 
 export const icons = [
   {
