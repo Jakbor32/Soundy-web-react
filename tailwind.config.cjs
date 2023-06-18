@@ -21,9 +21,11 @@ export default {
             maxWidth: {
                 '8xl': '90rem',
             },
+
         },
         fontFamily: {
-            "rubik": ["rubik", "sans-serif"]
+            "rubik": ["rubik", "sans-serif"],
+            "saira-stencil-one": ["saira stencil one", "sans-serif"],
         },
 
         keyframes: {
@@ -43,8 +45,9 @@ export default {
 
         },
 
+
     },
     plugins: [
-        require('tailwind-scrollbar'),
+
     ],
 }
