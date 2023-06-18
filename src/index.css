@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Georama:wght@500&family=Gotu&family=Oregano&family=Rubik:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300&family=Saira+Stencil+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Georama:wght@500&family=Gotu&family=Oregano&family=Rubik:ital,wght@0,300;0,400;0,600;0,700;0,800;1,500&family=Saira+Stencil+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,6 +16,8 @@ html, body {
     animation: slideOut .25s ease forwards;
 }
 
+
+/* Animation slide in/out */
 @keyframes slideIn {
     from {
         transform: translateX(-100%);
@@ -34,4 +36,27 @@ html, body {
     to {
         transform: translateX(-100%);
     }
+}
+
+
+
+/* Custom Scrollbar */
+*::-webkit-scrollbar {
+    max-width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000;
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #918383;
+    border-radius: 14px;
+
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #e0c5c5;
+
 }
