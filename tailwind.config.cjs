@@ -10,7 +10,7 @@ export default {
                 hvrNavClr: "#CCA873",
                 plusArrowClr: "#4B96AC",
                 redBarClr: "#5B0000",
-                featuredBgClr: "#0D0B0B",
+                featuredFooterBg: "#0D0B0B",
                 featuredTitleClr: "#D4B11C",
                 tourBarClr: "#270202",
                 starClr: "#FFB800",

@@ -11,6 +11,7 @@ import {
   AiOutlineDoubleLeft,
   AiOutlineLock,
   AiOutlineShopping,
+  AiOutlineCopyright,
 } from "react-icons/ai";
 import SoundyLogo from "../assets/soundy-logo.svg";
 
@@ -116,3 +117,46 @@ export const musicStats = {
   concertsDescription:
     "Performed concerts with hundreds of listeners from all over the world",
 };
+// Footer
+export const concertMessage =
+  "Playing on stage, we feel how the energy connects us with the audience, we create a powerful bond, see you at the concerts!";
+export const newsletterTitle = "Join our newsletter";
+export const newsletterText =
+  "Stay up to date with our newsletter - subscribe now!";
+export const newsletterInputPlaceholder = "Enter your email address...";
+export const submitButtonLabel = "Submit";
+export const copyrightText = (
+  <p className="flex flex-row items-center gap-1 text-center font-light">
+    <AiOutlineCopyright />
+    2023 Borowy Jakub. All rights reserved.
+  </p>
+);
+export const linksTitle = "Links";
+
+export const footerLinks = [
+  {
+    id: "news",
+    label: "News",
+    url: "#",
+  },
+  {
+    id: "music",
+    label: "Music",
+    url: "#",
+  },
+  {
+    id: "tour",
+    label: "Tour",
+    url: "#",
+  },
+  {
+    id: "shop",
+    label: "Shop",
+    url: "#",
+  },
+  {
+    id: "contact",
+    label: "Contact",
+    url: "#",
+  },
+];
