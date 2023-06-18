@@ -71,6 +71,16 @@ export const links = {
     icon: <FaGithub size={24} opacity={0.5} />,
     url: "https://github.com/Jakbor32/Soundy-web-react",
   },
+  store: {
+    id: "store",
+    text: "Visit our store",
+    url: "#store",
+  },
+  newsletter: {
+    id: "newsletter",
+    text: "Join our newsletter",
+    url: "#newsletter",
+  },
 };
 
 export const icons = [
@@ -94,3 +104,15 @@ export const logo = [
     path: SoundyLogo,
   },
 ];
+
+export const mainTitle = "Breaking boundaries with our music";
+export const subTitle =
+  "We transcend conventions, allowing us to create something completely new and unique. Join us and discover new dimensions of music!";
+
+export const musicStats = {
+  numFans: "4600",
+  fansDescription: "Fans on social media platforms Instagram and TikTok",
+  numConcerts: "65",
+  concertsDescription:
+    "Performed concerts with hundreds of listeners from all over the world",
+};
