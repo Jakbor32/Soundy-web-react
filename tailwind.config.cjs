@@ -21,11 +21,15 @@ export default {
             maxWidth: {
                 '8xl': '90rem',
             },
+            backgroundOpacity: {
+                '97': '0.97',
+            }
 
         },
         fontFamily: {
             "rubik": ["rubik", "sans-serif"],
             "saira-stencil-one": ["saira stencil one", "sans-serif"],
+            "epilogue": ["epilogue", "sans-serif"],
         },
 
         keyframes: {
