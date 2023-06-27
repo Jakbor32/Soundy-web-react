@@ -30,6 +30,7 @@ export default {
             "rubik": ["rubik", "sans-serif"],
             "saira-stencil-one": ["saira stencil one", "sans-serif"],
             "epilogue": ["epilogue", "sans-serif"],
+            "gotu": ["gotu", "sans-serif"],
         },
 
         keyframes: {

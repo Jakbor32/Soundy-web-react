@@ -14,6 +14,9 @@ import {
   AiOutlineCopyright,
 } from "react-icons/ai";
 import SoundyLogo from "../assets/soundy-logo.svg";
+import ImgCard1 from "../assets/festival.webp";
+import ImgCard2 from "../assets/festival_2.webp";
+import ImgCard3 from "../assets/festival_3.webp";
 
 export const navLinks = [
   {
@@ -160,3 +163,40 @@ export const footerLinks = [
     url: "#",
   },
 ];
+
+
+// Featured News
+
+export const featuredNews = [
+  {
+    id: 1,
+    image: ImgCard1,
+    imageAlt:"festival-photo-1",
+    dateNumber: "2023-04-03",
+    date: "MONDAY, APRIL 3RD, 2023",
+    title: "Soundy Surprises Fans with New Music at Local Festival",
+    description:
+      "During their set, Soundy debuted several new songs from their upcoming album, which had been kept under wraps until that moment. Fans were thrilled to hear the fresh material.",
+  },
+  {
+    id: 2,
+    image: ImgCard2,
+    imageAlt:"festival-photo-2",
+    dateNumber: "2023-07-05",
+    date: "FRIDAY JULY 5TH, 2023",
+    title: "Soundy Night: Energetic Sounds on Stage. Beats",
+    description:
+      "The crowd erupted with excitement as they immersed themselves in the fresh sounds and infectious rhythms. It was a night of sheer delight and a testament to Soundy's artistic evolution.",
+  },
+  {
+    id: 3,
+    image: ImgCard3,
+    imageAlt:"festival-photo-3",
+    dateNumber: "2023-08-10",
+    date: "SATURDAY AUGUST 10TH, 2023",
+    title: "Sonic Fusion: Soundy Live. Grooves",
+    description:
+      "The audience burst with anticipation as they surrendered to the captivating melodies. It became an evening of unadulterated joy and a testament to Soundy's creative growth.",
+  },
+];
+
