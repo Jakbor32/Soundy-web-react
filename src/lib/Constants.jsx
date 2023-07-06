@@ -18,6 +18,11 @@ import ImgCard1 from "../assets/festival.webp";
 import ImgCard2 from "../assets/festival_2.webp";
 import ImgCard3 from "../assets/festival_3.webp";
 
+import spotifyLogo from '../assets/spotify-logo.svg';
+import youtubeLogo from '../assets/youtube-logo.svg';
+import tiktokLogo from '../assets/tiktok-logo.svg';
+import appleMusicLogo from '../assets/apple-music-logo.svg';
+
 export const navLinks = [
   {
     id: "home",
@@ -200,3 +205,11 @@ export const featuredNews = [
   },
 ];
 
+//  Brand Slider
+
+export {
+  spotifyLogo,
+  youtubeLogo,
+  tiktokLogo,
+  appleMusicLogo
+}
