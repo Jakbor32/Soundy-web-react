@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -16,7 +17,8 @@ export default {
                 starClr: "#FFB800",
                 promoBgClr: "#0F0303",
                 footerBtnClr: "#1E1C1C",
-                hrClr: "#FFE7E7"
+                hrClr: "#FFE7E7",
+                brandBarClr: "#110F0F"
             },
             maxWidth: {
                 '8xl': '90rem',
@@ -53,6 +55,6 @@ export default {
 
     },
     plugins: [
-
     ],
+    
 }
