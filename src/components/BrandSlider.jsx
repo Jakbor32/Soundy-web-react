@@ -1,5 +1,5 @@
 import React from "react";
-import { brandLogos } from "../lib/constants";
+import { brandLogos } from "../lib/Constants";
 
 const BrandSlider = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "./Button"
 import { Spotify } from "react-spotify-embed";
-import { musicData, musicSectionTitle } from "./constants.jsx";
+import { musicData, musicSectionTitle } from "../lib/Constants";;
 
 const MusicSection = () => {
   return (
@@ -16,7 +16,7 @@ const MusicSection = () => {
       <div className="flex flex-col items-center justify-around gap-5 py-20 xl:flex-row">
         <div className="flex flex-col w-full gap-6 px-3 sm:px-10 xl:px-0 xl:w-1/2">
     
-          {musicData.map((trackLink) => (
+          {musicData.slice(0, -2).map((trackLink) => (
             <div
               key={trackLink}
               className="shadow-md rounded-xl shadow-white/20 bg-redBarClr"
