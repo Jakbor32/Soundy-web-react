@@ -18,6 +18,11 @@ import ImgCard1 from "../assets/festival.webp";
 import ImgCard2 from "../assets/festival_2.webp";
 import ImgCard3 from "../assets/festival_3.webp";
 
+import spotifyLogo from '../assets/spotify-logo.svg';
+import youtubeLogo from '../assets/youtube-logo.svg';
+import tiktokLogo from '../assets/tiktok-logo.svg';
+import appleMusicLogo from '../assets/apple-music-logo.svg';
+
 export const navLinks = [
   {
     id: "home",
@@ -129,7 +134,7 @@ export const newsletterText =
 export const newsletterInputPlaceholder = "Enter your email address...";
 export const submitButtonLabel = "Submit";
 export const copyrightText = (
-  <p className="flex flex-row items-center gap-1 text-center font-light">
+  <p className="flex flex-row items-center gap-1 font-light text-center">
     <AiOutlineCopyright />
     2023 Borowy Jakub. All rights reserved.
   </p>
@@ -199,4 +204,24 @@ export const featuredNews = [
       "The audience burst with anticipation as they surrendered to the captivating melodies. It became an evening of unadulterated joy and a testament to Soundy's creative growth.",
   },
 ];
+// Music Section
 
+export const musicSectionTitle = "Immerse Yourself in Our Music";
+
+export const musicData = [
+  "https://open.spotify.com/track/4hJ9GlqWQKgEU24yUbqDZB?si=49595976d03b4aa8",
+  "https://open.spotify.com/track/2Bhv2dpgjAfpJejQltrlOJ?si=4c6e80965b6a44e1",
+  "https://open.spotify.com/track/4mljaiRBQOvFCjcnzxlQ3F?si=d85d357f72b444ae",
+  "https://open.spotify.com/track/0vyzWCQaPRwaJPbRv9SB1q?si=20fcd0c799914f97",
+  "https://open.spotify.com/track/2RdwrJkx3swffe5ylzvfKR?si=4a50e8fa57e94f9e",
+  "https://open.spotify.com/track/6JRKroQWBkGk44TV4HbSl5?si=2c689ab481354f86"
+];
+
+//  Brand Slider
+
+export const brandLogos = [
+  { src: spotifyLogo, alt: "Spotify Logo" },
+  { src: youtubeLogo, alt: "YouTube Logo" },
+  { src: tiktokLogo, alt: "TikTok Logo" },
+  { src: appleMusicLogo, alt: "Apple Music Logo" }
+];
