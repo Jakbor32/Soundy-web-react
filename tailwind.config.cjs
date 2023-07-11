@@ -19,7 +19,7 @@ export default {
                 footerBtnClr: "#1E1C1C",
                 hrClr: "#FFE7E7",
                 brandBarClr: "#110F0F",
-                bgTicketClr: "#270202"
+                bgTicketClr: "#270202",
             },
             maxWidth: {
                 '8xl': '90rem',

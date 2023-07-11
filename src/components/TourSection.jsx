@@ -1,6 +1,6 @@
 import React from "react";
-import Ticket from "./Ticket";
 import Button from "./Button";
+import Ticket from "./Ticket";
 import { tickets,TourSectionTitle } from "../lib/Constants";
 
 const TourSection = () => {
