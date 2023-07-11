@@ -18,7 +18,8 @@ export default {
                 promoBgClr: "#0F0303",
                 footerBtnClr: "#1E1C1C",
                 hrClr: "#FFE7E7",
-                brandBarClr: "#110F0F"
+                brandBarClr: "#110F0F",
+                bgTicketClr: "#270202"
             },
             maxWidth: {
                 '8xl': '90rem',
@@ -33,6 +34,7 @@ export default {
             "saira-stencil-one": ["saira stencil one", "sans-serif"],
             "epilogue": ["epilogue", "sans-serif"],
             "gotu": ["gotu", "sans-serif"],
+            "oregano": ["oregano", "sans-serif"],
         },
 
         keyframes: {
