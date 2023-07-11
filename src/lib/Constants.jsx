@@ -225,3 +225,33 @@ export const brandLogos = [
   { src: tiktokLogo, alt: "TikTok Logo" },
   { src: appleMusicLogo, alt: "Apple Music Logo" }
 ];
+
+// Tour Section
+
+export const TourSectionTitle = "Check the latest venues we will be at";
+export const tickets = [
+  {
+    date: "10.11.2023",
+    location: "Warsaw, Poland",
+    eventName: "Fretboard Fury",
+    link: "#"
+  },
+  {
+    date: "15.12.2023",
+    location: "New York, USA",
+    eventName: "Guitar Extravaganza",
+    link: "#"
+  },
+  {
+    date: "20.01.2024",
+    location: "London, UK",
+    eventName: "Rock Revolution",
+    link: "#"
+  },
+  {
+    date: "05.03.2024",
+    location: "Paris, France",
+    eventName: "Melody Mania",
+    link: "#"
+  }
+];
