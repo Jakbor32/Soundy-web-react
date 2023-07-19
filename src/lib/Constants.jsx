@@ -18,11 +18,14 @@ import ImgCard1 from "../assets/festival.webp";
 import ImgCard2 from "../assets/festival_2.webp";
 import ImgCard3 from "../assets/festival_3.webp";
 
-import spotifyLogo from '../assets/spotify-logo.svg';
-import youtubeLogo from '../assets/youtube-logo.svg';
-import tiktokLogo from '../assets/tiktok-logo.svg';
-import appleMusicLogo from '../assets/apple-music-logo.svg';
+import spotifyLogo from "../assets/spotify-logo.svg";
+import youtubeLogo from "../assets/youtube-logo.svg";
+import tiktokLogo from "../assets/tiktok-logo.svg";
+import appleMusicLogo from "../assets/apple-music-logo.svg";
 
+import cupImg from "../assets/soundy_cup.png";
+import tshirtImg from "../assets/soundy_t-shirt.png";
+import tshirtImg2 from "../assets/soundy_t-shirt2.png";
 export const navLinks = [
   {
     id: "home",
@@ -169,14 +172,13 @@ export const footerLinks = [
   },
 ];
 
-
 // Featured News
 
 export const featuredNews = [
   {
     id: 1,
     image: ImgCard1,
-    imageAlt:"festival-photo-1",
+    imageAlt: "festival-photo-1",
     dateNumber: "2023-04-03",
     date: "MONDAY, APRIL 3RD, 2023",
     title: "Soundy Surprises Fans with New Music at Local Festival",
@@ -186,7 +188,7 @@ export const featuredNews = [
   {
     id: 2,
     image: ImgCard2,
-    imageAlt:"festival-photo-2",
+    imageAlt: "festival-photo-2",
     dateNumber: "2023-07-05",
     date: "FRIDAY JULY 5TH, 2023",
     title: "Soundy Night: Energetic Sounds on Stage. Beats",
@@ -196,7 +198,7 @@ export const featuredNews = [
   {
     id: 3,
     image: ImgCard3,
-    imageAlt:"festival-photo-3",
+    imageAlt: "festival-photo-3",
     dateNumber: "2023-08-10",
     date: "SATURDAY AUGUST 10TH, 2023",
     title: "Sonic Fusion: Soundy Live. Grooves",
@@ -214,7 +216,7 @@ export const musicData = [
   "https://open.spotify.com/track/4mljaiRBQOvFCjcnzxlQ3F?si=d85d357f72b444ae",
   "https://open.spotify.com/track/0vyzWCQaPRwaJPbRv9SB1q?si=20fcd0c799914f97",
   "https://open.spotify.com/track/2RdwrJkx3swffe5ylzvfKR?si=4a50e8fa57e94f9e",
-  "https://open.spotify.com/track/6JRKroQWBkGk44TV4HbSl5?si=2c689ab481354f86"
+  "https://open.spotify.com/track/6JRKroQWBkGk44TV4HbSl5?si=2c689ab481354f86",
 ];
 
 //  Brand Slider
@@ -223,7 +225,7 @@ export const brandLogos = [
   { src: spotifyLogo, alt: "Spotify Logo" },
   { src: youtubeLogo, alt: "YouTube Logo" },
   { src: tiktokLogo, alt: "TikTok Logo" },
-  { src: appleMusicLogo, alt: "Apple Music Logo" }
+  { src: appleMusicLogo, alt: "Apple Music Logo" },
 ];
 
 // Tour Section
@@ -234,24 +236,68 @@ export const tickets = [
     date: "10.11.2023",
     location: "Warsaw, Poland",
     eventName: "Fretboard Fury",
-    link: "#"
+    link: "#",
   },
   {
     date: "15.12.2023",
     location: "New York, USA",
     eventName: "Guitar Extravaganza",
-    link: "#"
+    link: "#",
   },
   {
     date: "20.01.2024",
     location: "London, UK",
     eventName: "Rock Revolution",
-    link: "#"
+    link: "#",
   },
   {
     date: "05.03.2024",
     location: "Paris, France",
     eventName: "Melody Mania",
-    link: "#"
-  }
+    link: "#",
+  },
+];
+
+// Promotions Section
+
+export const promotionSectionTitle = "Check the current promotions";
+export const promotionSlides = [
+  {
+    title: "Quality",
+    description: "Style, warmth, and discount!",
+    customerTitle: "Customer review",
+    rating: [1, 2, 3, 4, 5],
+    discount: "14$",
+    price: "19$",
+    benefits: [
+      "Print/pattern options",
+      "Neckline style",
+      "Button or zipper closure",
+      "Embellishments",
+    ],
+    img: tshirtImg2,
+    imgDesc: "Soundy T-shirt",
+  },
+  {
+    title: "Comfort",
+    description: "T-shirt Revolution",
+    customerTitle: "Customer review",
+    rating: [1, 2, 3, 4],
+    discount: "11$",
+    price: "15$",
+    benefits: ["Color variety", "Sleeve length", "Stylee", "Breathability"],
+    img: tshirtImg,
+    imgDesc: "Soundy T-shirt",
+  },
+  {
+    title: "Stylish",
+    description: "Cup promotion at a great price!",
+    customerTitle: "Customer review",
+    rating: [1, 2, 3, 4],
+    discount: "20$",
+    price: "24$",
+    benefits: ["Durability", "Heat insulation", "Easy to clean", "Versatility"],
+    img: cupImg,
+    imgDesc: "Soundy Cup",
+  },
 ];
