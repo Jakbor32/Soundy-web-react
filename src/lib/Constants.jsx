@@ -12,6 +12,10 @@ import {
   AiOutlineLock,
   AiOutlineShopping,
   AiOutlineCopyright,
+  AiOutlineYoutube,
+  AiOutlineMail,
+  AiOutlinePhone,
+  AiOutlineEnvironment,
 } from "react-icons/ai";
 import SoundyLogo from "../assets/soundy-logo.svg";
 import ImgCard1 from "../assets/festival.webp";
@@ -299,5 +303,29 @@ export const promotionSlides = [
     benefits: ["Durability", "Heat insulation", "Easy to clean", "Versatility"],
     img: cupImg,
     imgDesc: "Soundy Cup",
+  },
+];
+
+// Contact Form
+
+export const contactFormTitle = "Get in touch with us";
+export const contactFormSubtitle = "Additional methods of reaching us";
+
+export const contactInfo = [
+  {
+    icon: <AiOutlineEnvironment size={28} />,
+    text: "11 Queensway, Warton, Preston PR4 1XT, United Kingdom",
+  },
+  {
+    icon: <AiOutlinePhone size={28} />,
+    text: "+41 55 555 55 55",
+  },
+  {
+    icon: <AiOutlineMail size={28} />,
+    text: "SoundyOfficial@gmail.com",
+  },
+  {
+    icon: <AiOutlineYoutube size={28} />,
+    text: "@SoundyOfficial",
   },
 ];
