@@ -32,23 +32,23 @@ import tshirtImg from "../assets/soundy_t-shirt.png";
 import tshirtImg2 from "../assets/soundy_t-shirt2.png";
 export const navLinks = [
   {
-    id: "/",
+    id: "home",
     val: "Home",
   },
   {
-    id: "/tour",
+    id: "tour",
     val: "Tour",
   },
   {
-    id: "/media",
+    id: "media",
     val: "Media",
   },
   {
-    id: "/aboutus",
+    id: "aboutUs",
     val: "About us",
   },
   {
-    id: "/store",
+    id: "store",
     val: "Store",
   },
 ];
@@ -90,7 +90,7 @@ export const links = {
   store: {
     id: "store",
     text: "Visit our store",
-    url: "/store",
+    url: "#store",
   },
   newsletter: {
     id: "newsletter",
@@ -157,22 +157,22 @@ export const footerLinks = [
   {
     id: "music",
     label: "Music",
-    url: "/media",
+    url: "#",
   },
   {
     id: "tour",
     label: "Tour",
-    url: "/tour",
+    url: "#",
   },
   {
     id: "shop",
     label: "Shop",
-    url: "/store",
+    url: "#",
   },
   {
     id: "contact",
     label: "Contact",
-    url: "#contact",
+    url: "#",
   },
 ];
 
