@@ -33,7 +33,7 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <div className="flex max-w-full flex-col items-center gap-7 lg:pr-3">
+          <div className="flex max-w-full flex-col items-center gap-7 lg:pr-3" id="newsletter">
             <div className="flex flex-col items-center lg:items-start">
               <h4 className="-ml-2.5 mb-3 border-l-4 border-redBarClr pl-2 pt-2 text-[1.125rem] text-zinc-100">
                 {newsletterTitle}
