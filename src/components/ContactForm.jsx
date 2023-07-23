@@ -59,7 +59,7 @@ const ContactForm = () => {
   }, [activeInput]);
 
   return (
-    <section id="contact" className="relative px-5 py-10 overflow-hidden lg:px-0">
+    <div className="relative px-5 py-10 overflow-hidden lg:px-0">
       <div className="absolute top-0 left-0 w-full h-full ">
         <img
           className="object-cover w-full h-full opacity-5"
@@ -126,7 +126,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
