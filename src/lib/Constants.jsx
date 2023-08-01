@@ -21,6 +21,8 @@ import SoundyLogo from "../assets/soundy-logo.svg";
 import ImgCard1 from "../assets/festival.webp";
 import ImgCard2 from "../assets/festival_2.webp";
 import ImgCard3 from "../assets/festival_3.webp";
+import ImgCard4 from "../assets/festival_4.webp";
+import ImgCard5 from "../assets/festival_5.webp";
 
 import spotifyLogo from "../assets/spotify-logo.svg";
 import youtubeLogo from "../assets/youtube-logo.svg";
@@ -180,7 +182,7 @@ export const footerLinks = [
 
 export const featuredNews = [
   {
-    id: 1,
+    id: 0,
     image: ImgCard1,
     imageAlt: "festival-photo-1",
     dateNumber: "2023-04-03",
@@ -190,7 +192,7 @@ export const featuredNews = [
       "During their set, Soundy debuted several new songs from their upcoming album, which had been kept under wraps until that moment. Fans were thrilled to hear the fresh material.",
   },
   {
-    id: 2,
+    id: 1,
     image: ImgCard2,
     imageAlt: "festival-photo-2",
     dateNumber: "2023-07-05",
@@ -200,7 +202,7 @@ export const featuredNews = [
       "The crowd erupted with excitement as they immersed themselves in the fresh sounds and infectious rhythms. It was a night of sheer delight and a testament to Soundy's artistic evolution.",
   },
   {
-    id: 3,
+    id: 2,
     image: ImgCard3,
     imageAlt: "festival-photo-3",
     dateNumber: "2023-08-10",
@@ -209,6 +211,27 @@ export const featuredNews = [
     description:
       "The audience burst with anticipation as they surrendered to the captivating melodies. It became an evening of unadulterated joy and a testament to Soundy's creative growth.",
   },
+  {
+    id: 3,
+    image: ImgCard4,
+    imageAlt: "festival-photo-4",
+    dateNumber: "2023-06-21",
+    date: "WEDNESDAY, JUNE 21ST, 2023",
+    title: "Soundy's Electrifying Performance Leaves Fans Begging for More",
+    description:
+      "During their mesmerizing set, Soundy surprised their devoted fans with a series of unreleased tracks from their highly anticipated album. The air crackled with excitement as the audience reveled in the fresh, invigorating melodies.",
+  },
+  {
+    id: 4,
+    image: ImgCard5,
+    imageAlt: "festival-photo-5",
+    dateNumber: "2023-09-17",
+    date: "SUNDAY, SEPTEMBER 17TH, 2023",
+    title: "Soundy's Enthralling Gig Sets the Night Alight",
+    description:
+      "The night sky lit up with fervor as Soundy took the stage, unleashing an electrifying showcase of their latest compositions. Attendees were swept away by the pulsating beats and infectious energy, witnessing Soundy's artistic prowess in full bloom.",
+  },
+ 
 ];
 // Music Section
 
