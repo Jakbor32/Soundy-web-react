@@ -68,17 +68,12 @@ const Sidebar = ({ open, setOpen }) => {
               </li>
             ))}
           </ul>
-          <div className="absolute bottom-0 px-3 py-5">
-          <div className="flex justify-center ">
-            <img src={logo[0].path} alt={logo[0].desc} />
-          </div>
-          <div className="flex justify-center w-full gap-4 px-2 opacity-50 ">
+          <div className="flex justify-center w-full gap-4 px-2 opacity-50 my-10">
             {socialLinks.map((link) => (
               <a key={link.id} href={link.url}>
                 {link.icon}
               </a>
             ))}
-          </div>
           </div>
           <div className="absolute top-0 right-0 px-3 py-3 ">
             <a href={links.github.url}>{links.github.icon}</a>

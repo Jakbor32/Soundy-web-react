@@ -96,7 +96,7 @@ const ContactForm = () => {
                   name={inputName}
                   id={inputName}
                   type="text"
-                  className={`bg-transparent border-b-2 outline-none sm:w-96 w-full ${
+                  className={`bg-transparent border-b-2 outline-none sm:w-96 w-full focus:ring-0 focus:bg-transparent ${
                     isInputActive(inputName) ? "" : "opacity-50"
                   } transition-all duration-500`}
                   onClick={() => handleInputClick(inputName)}

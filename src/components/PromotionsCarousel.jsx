@@ -30,13 +30,7 @@ const PromotionsCarousel = () => {
             {promotionSlides.map((slide, index) => (
               <SplideSlide key={index}>
                 <div className="flex xl:flex-row w-full bg-zinc-900 xl:h-[40rem] h-[60rem] items-center justify-center flex-col-reverse gap-5 xl:gap-0 ">
-                  <div className="flex flex-col items-center justify-center  lg:h-full h-[32rem] gap-3 pl-20 pr-24 xl:gap-10 xl:items-start">
-                    <div className="absolute left-1/4">
-                      <div className="w-[150rem] h-64  rotate-45 bg-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10"></div>
-                      <div className="w-[150rem] h-20  rotate-45 bg-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 "></div>
-                      <div className="w-[150rem] h-64  rotate-45 bg-black absolute top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/2 opacity-10"></div>
-                      <div className="w-[150rem] h-20  rotate-45 bg-black absolute top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/2 opacity-5 "></div>
-                    </div>
+                  <div className="flex flex-col items-center justify-center  lg:h-full h-[32rem] gap-3 pl-20 pr-24 xl:gap-10 xl:items-start"> 
                     <h3 className="text-3xl tracking-wide uppercase xl:text-6xl font-saira-stencil-one">
                       {slide.title}
                     </h3>
@@ -94,9 +88,6 @@ const PromotionsCarousel = () => {
             ))}
           </Splide>
         </div>
-      </div>
-      <div className="flex justify-center py-5 lg:py-10 ">
-        <Button>See More</Button>
       </div>
     </section>
   );
