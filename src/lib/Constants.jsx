@@ -11,7 +11,6 @@ import {
   AiOutlineDoubleLeft,
   AiOutlineLock,
   AiOutlineShopping,
-  AiOutlineCopyright,
   AiOutlineYoutube,
   AiOutlineMail,
   AiOutlinePhone,
@@ -28,6 +27,8 @@ import spotifyLogo from "../assets/spotify-logo.svg";
 import youtubeLogo from "../assets/youtube-logo.svg";
 import tiktokLogo from "../assets/tiktok-logo.svg";
 import appleMusicLogo from "../assets/apple-music-logo.svg";
+import soundCloudLogo from "../assets/soundcloud-logo.svg";
+import deezerLogo from "../assets/deezer-logo.svg";
 
 import cupImg from "../assets/soundy_cup.png";
 import tshirtImg from "../assets/soundy_t-shirt.png";
@@ -143,9 +144,8 @@ export const newsletterText =
 export const newsletterInputPlaceholder = "Enter your email address...";
 export const submitButtonLabel = "Submit";
 export const copyrightText = (
-  <p className="flex flex-row items-center gap-1 font-light text-center">
-    <AiOutlineCopyright />
-    2023 Borowy Jakub. All rights reserved.
+  <p className="font-light text-center">
+    &copy; 2023 Borowy Jakub. All rights reserved.
   </p>
 );
 export const linksTitle = "Links";
@@ -175,6 +175,11 @@ export const footerLinks = [
     id: "contact",
     label: "Contact",
     url: "#contact",
+  },
+  {
+    id: "login",
+    label: "Login",
+    url: "#login",
   },
 ];
 
@@ -253,6 +258,8 @@ export const brandLogos = [
   { src: youtubeLogo, alt: "YouTube Logo" },
   { src: tiktokLogo, alt: "TikTok Logo" },
   { src: appleMusicLogo, alt: "Apple Music Logo" },
+  { src: soundCloudLogo, alt: "SoundCloud Logo" },
+  { src: deezerLogo, alt: "Deezer Logo" },
 ];
 
 // Tour Section
