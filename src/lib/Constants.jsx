@@ -33,6 +33,13 @@ import deezerLogo from "../assets/deezer-logo.svg";
 import cupImg from "../assets/soundy_cup.png";
 import tshirtImg from "../assets/soundy_t-shirt.png";
 import tshirtImg2 from "../assets/soundy_t-shirt2.png";
+
+import guitarHeroImg from "../assets/guitar-hero.webp";
+import powerOfStringImg from "../assets/power-of-strings.webp";
+import bluesJamImg from "../assets/blues-jam.webp";
+import shreddingImg  from "../assets/shredding.webp";
+import stevieRayImg from "../assets/stevie-ray.webp";
+
 export const navLinks = [
   {
     id: "/",
@@ -243,13 +250,43 @@ export const featuredNews = [
 export const musicSectionTitle = "Immerse Yourself in Our Music";
 
 export const musicData = [
-  "https://open.spotify.com/track/4hJ9GlqWQKgEU24yUbqDZB?si=49595976d03b4aa8",
-  "https://open.spotify.com/track/2Bhv2dpgjAfpJejQltrlOJ?si=4c6e80965b6a44e1",
-  "https://open.spotify.com/track/4mljaiRBQOvFCjcnzxlQ3F?si=d85d357f72b444ae",
-  "https://open.spotify.com/track/0vyzWCQaPRwaJPbRv9SB1q?si=20fcd0c799914f97",
-  "https://open.spotify.com/track/2RdwrJkx3swffe5ylzvfKR?si=4a50e8fa57e94f9e",
-  "https://open.spotify.com/track/6JRKroQWBkGk44TV4HbSl5?si=2c689ab481354f86",
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%20-%20Over%20The%20Sun%20(Pt.%202)%20%5BNCS%20Release%5D.mp3?alt=media&token=10f1469d-864b-4fab-a8c5-531cf3f55602",
+    imageUrl: guitarHeroImg,
+    artist: "Jimmy Hendrix",
+    title: "Guitar Hero",
+  },
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%2C%20Afterfab%2C%20Heleen%20-%20EX%20%5BNCS%20Release%5D.mp3?alt=media&token=d85e6cf3-495c-47d5-8845-fc96f36189f2",
+    imageUrl: powerOfStringImg,
+    artist: "Slash",
+    title: "The Power of Strings",
+  },
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%2C%20EBEN%2C%20Shiah%20Maisel%20-%20Ruined%20My%20Life%20%5BNCS%20Release%5D.mp3?alt=media&token=6ffc7f4e-a874-438f-9035-af63bed39384",
+    imageUrl: bluesJamImg,
+    artist: "Eric Clapton",
+    title: "Blues Jam",
+  },
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%2C%20KHEMIS%20-%20If%20Looks%20Can%20Kill%20%5BNCS%20Release%5D.mp3?alt=media&token=c2b0c858-f978-4d26-9993-077ed88df308",
+    imageUrl: shreddingImg,
+    artist: "Eddie Van Halen",
+    title: "Shredding in the Shadows",
+  },
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%2C%20Nito-Onna%20%26%20DJ%20Frog%20-%20Whispered%20Promises%20%5BNCS%20Release%5D.mp3?alt=media&token=f878657a-0be7-4efc-bb54-1b3d777c0f42",
+    imageUrl: stevieRayImg,
+    artist: "Stevie Ray Vaughan",
+    title: "Soulful Riffs",
+  },
 ];
+
 
 //  Brand Slider
 
