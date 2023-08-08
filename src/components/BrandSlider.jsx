@@ -11,7 +11,7 @@ const BrandSlider = () => {
     <section className="relative shadow-md bg-brandBarClr shadow-black">
       <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-white opacity-5"></div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white opacity-5"></div>
-      <div className="container flex flex-row flex-wrap px-5 py-5 mx-auto lg:justify-between md:px-20">
+      <div className="container flex flex-row  px-5 mx-auto md:px-20 h-24 items-center">
       <Splide
             aria-label="BrandSlider"
             options={{
@@ -26,7 +26,10 @@ const BrandSlider = () => {
               },
               breakpoints: {
                 1000: {
-                  perPage: 4,
+                  perPage: 3,
+                },
+                600:{
+                  perPage: 2,
                 },
               },
             }}
@@ -37,7 +40,7 @@ const BrandSlider = () => {
            <SplideSlide key={index}>
           <img
             key={logo.src}
-            className="h-full px-1 xl:px-10"
+            className="h-full px-5 xl:px-10"
             src={logo.src}
             alt={logo.alt}
           />

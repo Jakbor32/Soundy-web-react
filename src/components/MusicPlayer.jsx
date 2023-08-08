@@ -66,18 +66,21 @@ const MusicPlayer = ({ musicData }) => {
 
   const skipNextHandler = () => {
     setCurrentTrack((prevTrack) => (prevTrack + 1) % musicData.length);
+    setIsPlaying(false);
   };
 
   const skipPrevHandler = () => {
     setCurrentTrack(
       (prevTrack) => (prevTrack - 1 + musicData.length) % musicData.length
     );
+    setIsPlaying(false);
+    
   };
 
   const currentTrackData = musicData[currentTrack];
 
   return (
-    <div className="relative max-w-md mx-auto p-4 bg-red-950 rounded-lg shadow-md bg-opacity-80">
+    <div className="relative max-w-md mx-auto p-4 bg-bgTicketClr rounded-lg shadow-md bg-opacity-80">
       <div
         className="h-56 bg-cover bg-center mb-4 rounded-lg shadow-md"
         style={{ backgroundImage: `url(${currentTrackData.imageUrl})` }}
