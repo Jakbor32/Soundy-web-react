@@ -37,7 +37,7 @@ import tshirtImg2 from "../assets/soundy_t-shirt2.png";
 import guitarHeroImg from "../assets/guitar-hero.webp";
 import powerOfStringImg from "../assets/power-of-strings.webp";
 import bluesJamImg from "../assets/blues-jam.webp";
-import shreddingImg  from "../assets/shredding.webp";
+import shreddingImg from "../assets/shredding.webp";
 import stevieRayImg from "../assets/stevie-ray.webp";
 
 export const navLinks = [
@@ -243,7 +243,6 @@ export const featuredNews = [
     description:
       "The night sky lit up with fervor as Soundy took the stage, unleashing an electrifying showcase of their latest compositions. Attendees were swept away by the pulsating beats and infectious energy, witnessing Soundy's artistic prowess in full bloom.",
   },
- 
 ];
 // Music Section
 
@@ -286,7 +285,6 @@ export const musicData = [
     title: "Soulful Riffs",
   },
 ];
-
 
 //  Brand Slider
 
@@ -394,5 +392,40 @@ export const contactInfo = [
   {
     icon: <AiOutlineYoutube size={28} />,
     text: "@SoundyOfficial",
+  },
+];
+
+// NCS
+
+export const toastTexts = [
+  {
+    songTitle: "Coopex, Afterfab, Heleen - EX [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://ncs.io/CAH_EX",
+    watchLink: "http://ncs.lnk.to/CAH_EXAT/youtube",
+  },
+  {
+    songTitle: "Coopex - Over The Sun (Pt. 2) [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://ncs.io/OTS_EP",
+    watchLink: "http://ncs.lnk.to/OTS_EPAT/youtube",
+  },
+  {
+    songTitle: "Coopex, KHEMIS - If Looks Can Kill [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://ncs.io/IfLooksCanKill",
+    watchLink: "http://NCS.lnk.to/IfLooksCanKillAT/youtube",
+  },
+  {
+    songTitle: "Coopex, Nito-Onna & DJ Frog - Whispered Promises [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://NCS.io/WhisperedPromises",
+    watchLink: "http://youtu.be/xwcwExC4t7w",
+  },
+  {
+    songTitle: "Coopex, EBEN, Shiah Maisel - Ruined My Life [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://ncs.io/RuinedMyLife",
+    watchLink: "http://youtu.be/pB8ZNnNHWyU",
   },
 ];

@@ -6,13 +6,46 @@ import {
   AiOutlineStepForward,
   AiOutlinePlayCircle,
   AiOutlinePause,
+  AiOutlineInfoCircle,
 } from "react-icons/ai";
+import toast, { Toaster } from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { toastTexts } from "../lib/Constants";
 
 const MusicPlayer = ({ musicData }) => {
   const [currentTrack, setCurrentTrack] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const audioRef = useRef(null);
+
+  const ToastWithLink = ({ index }) => (
+    <div>
+      <p>Song: {toastTexts[index].songTitle}</p>
+      <p>{toastTexts[index].musicInfo}</p>
+      <p>
+        <Link to={toastTexts[index].freeDownloadLink}>
+          Free Download/Stream: {toastTexts[index].freeDownloadLink}
+        </Link>
+      </p>
+      <p>
+        <Link to={toastTexts[index].watchLink}>
+          Watch: {toastTexts[index].watchLink}
+        </Link>
+      </p>
+    </div>
+  );
+
+  const notify = (index) => {
+    toast(<ToastWithLink index={index} />, {
+      duration: 3000,
+      position: "bottom-right",
+      style: {
+        background: "#363636",
+        color: "#fff",
+        fontSize: ".7rem",
+      },
+    });
+  };
 
   // Update progress of the track
 
@@ -74,7 +107,6 @@ const MusicPlayer = ({ musicData }) => {
       (prevTrack) => (prevTrack - 1 + musicData.length) % musicData.length
     );
     setIsPlaying(false);
-    
   };
 
   const currentTrackData = musicData[currentTrack];
@@ -86,13 +118,20 @@ const MusicPlayer = ({ musicData }) => {
         style={{ backgroundImage: `url(${currentTrackData.imageUrl})` }}
       />
       <div className="relative grid gap-4">
-        <div className="z-10 relative text-center">
-          <h2 className="text-3xl font-bold text-white mb-2">
+        <div className=" relative text-center">
+          <h2 className="text-3xl font-bold text-white mb-2 px-10">
             {currentTrackData.title}
           </h2>
           <p className="text-gray-300 mb-1">{currentTrackData.artist}</p>
         </div>
-        <div className="flex items-center justify-center mb-2 z-10 relative">
+        <div>
+          <AiOutlineInfoCircle
+            onClick={() => notify(currentTrack)}
+            className="absolute left-0  top-0 cursor-pointer text-white h-10 w-6"
+          />
+          <Toaster />
+        </div>
+        <div className="flex items-center justify-center mb-2  relative">
           <button onClick={skipPrevHandler} className="mr-2">
             <AiOutlineStepBackward className="h-10 w-10 text-white cursor-pointer" />
           </button>
@@ -107,7 +146,7 @@ const MusicPlayer = ({ musicData }) => {
             <AiOutlineStepForward className="h-10 w-10 text-white cursor-pointer" />
           </button>
         </div>
-        <div className="flex items-center z-10 relative">
+        <div className="flex items-center  relative">
           <Slider
             value={progress}
             onChange={(value) => {

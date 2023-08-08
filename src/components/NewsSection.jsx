@@ -25,11 +25,11 @@ const NewsSection = () => {
               autoplay: true,
               perPage: 3,
               width: "75rem",
-              focus: "",
+              drag: false,
               perMove: 1,
               arrows: false,
               gap: "0.5rem",
-              pagination: false,
+              pagination: true,
               rewind: true,
               breakpoints: {
                 450: {
@@ -44,6 +44,10 @@ const NewsSection = () => {
                   perPage: 2,
                   width: "50rem",
                 },
+              },
+              classes: {
+                pagination: "splide__pagination pag-pagination",
+                page: "splide__pagination__page pag-page",
               },
             }}
           >
