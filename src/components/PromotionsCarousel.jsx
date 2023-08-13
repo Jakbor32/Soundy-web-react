@@ -10,7 +10,7 @@ const PromotionsCarousel = () => {
   return (
     <section>
       <div className="flex flex-col items-center gap-8 py-10 mx-auto">
-        <h2 className="text-5xl text-center text-white uppercase font-epilogue">
+        <h2 className="text-3xl text-center text-white uppercase md:text-4xl font-epilogue">
           {promotionSectionTitle}
         </h2>
         <div className="w-48 h-1 bg-redBarClr"></div>

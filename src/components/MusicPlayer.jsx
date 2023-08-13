@@ -24,12 +24,12 @@ const MusicPlayer = ({ musicData }) => {
       <p>{toastTexts[index].musicInfo}</p>
       <p>
         <Link to={toastTexts[index].freeDownloadLink}>
-          Free Download/Stream: {toastTexts[index].freeDownloadLink}
+          Free Download/Stream: <i className="text-blue-300 hover:text-blue-500">{toastTexts[index].freeDownloadLink}</i>
         </Link>
       </p>
       <p>
         <Link to={toastTexts[index].watchLink}>
-          Watch: {toastTexts[index].watchLink}
+          Watch: <i className="text-blue-300 hover:text-blue-500">{toastTexts[index].watchLink}</i>
         </Link>
       </p>
     </div>
@@ -112,41 +112,41 @@ const MusicPlayer = ({ musicData }) => {
   const currentTrackData = musicData[currentTrack];
 
   return (
-    <div className="relative max-w-md mx-auto p-4 bg-bgTicketClr rounded-lg shadow-md bg-opacity-80">
+    <div className="relative max-w-md p-4 mx-auto rounded-lg shadow-md bg-bgTicketClr bg-opacity-80">
       <div
-        className="h-56 bg-cover bg-center mb-4 rounded-lg shadow-md"
+        className="h-56 mb-4 bg-center bg-cover rounded-lg shadow-md"
         style={{ backgroundImage: `url(${currentTrackData.imageUrl})` }}
       />
       <div className="relative grid gap-4">
-        <div className=" relative text-center">
-          <h2 className="text-3xl font-bold text-white mb-2 px-10">
+        <div className="relative text-center ">
+          <h2 className="px-10 mb-2 text-3xl font-bold text-white">
             {currentTrackData.title}
           </h2>
-          <p className="text-gray-300 mb-1">{currentTrackData.artist}</p>
+          <p className="mb-1 text-gray-300">{currentTrackData.artist}</p>
         </div>
         <div>
           <AiOutlineInfoCircle
             onClick={() => notify(currentTrack)}
-            className="absolute left-0  top-0 cursor-pointer text-white h-10 w-6"
+            className="absolute top-0 left-0 w-6 h-10 text-white cursor-pointer"
           />
           <Toaster />
         </div>
-        <div className="flex items-center justify-center mb-2  relative">
+        <div className="relative flex items-center justify-center mb-2">
           <button onClick={skipPrevHandler} className="mr-2">
-            <AiOutlineStepBackward className="h-10 w-10 text-white cursor-pointer" />
+            <AiOutlineStepBackward className="w-10 h-10 text-white cursor-pointer" />
           </button>
           <button onClick={playPauseHandler}>
             {isPlaying ? (
-              <AiOutlinePause className="h-10 w-10 text-white cursor-pointer" />
+              <AiOutlinePause className="w-10 h-10 text-white cursor-pointer" />
             ) : (
-              <AiOutlinePlayCircle className="h-10 w-10 text-white cursor-pointer" />
+              <AiOutlinePlayCircle className="w-10 h-10 text-white cursor-pointer" />
             )}
           </button>
           <button onClick={skipNextHandler} className="ml-2">
-            <AiOutlineStepForward className="h-10 w-10 text-white cursor-pointer" />
+            <AiOutlineStepForward className="w-10 h-10 text-white cursor-pointer" />
           </button>
         </div>
-        <div className="flex items-center  relative">
+        <div className="relative flex items-center">
           <Slider
             value={progress}
             onChange={(value) => {

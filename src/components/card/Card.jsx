@@ -20,7 +20,7 @@ const Card = ({ image, date, title, description, imageAlt, dateNumber }) => {
           <p className="text-sm leading">{description}</p>
         </div>
       </div>
-      <a className="text-[1.125rem] px-6 mb-3 text-gray-500 " href="#">
+      <a className="text-[1.125rem] px-6 mb-3 text-gray-500 w-max" href="#">
         Read more...
       </a>
     </div>

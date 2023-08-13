@@ -62,7 +62,7 @@ body {
 .pag-pagination {
   color: white;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 0.3rem;
 }
 .pag-pagination .is-active {

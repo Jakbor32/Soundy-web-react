@@ -1,19 +1,34 @@
 import React from "react";
 
 const Ticket = (props) => {
-
   return (
-    <div className="flex flex-row flex-wrap items-center justify-center w-full gap-6 px-5 py-5 lg:justify-between md:px-20 lg:gap-0 bg-bgTicketClr">
-      <div className="flex items-center gap-16 uppercase">
-        <time className="text-xl lg:text-3xl font-saira-stencil-one" dateTime="2023-12-10">{props.ticketDate}</time>
-        <p className="text-sm font-light lg:text-xl">{props.ticketLocation}</p>
+    <div className="container px-5 lg:px-20">
+        <div className="flex flex-col items-start justify-start gap-5 md:items-center md:justify-between md:flex-row md:gap-0">
+          <div className="flex items-center gap-5">
+            <div className="flex items-center w-20 h-20 p-5 text-center border-2 rounded-full md:w-24 md:h-24">
+              <time className="text-sm leading-4 md:leading-5 md:text-xl font-saira-stencil-one">
+                {props.ticketDate}
+              </time>
+            </div>
+            <div className="flex flex-col uppercase">
+              <h4 className="text-sm text-yellow-600 md:text-2xl">
+                {props.ticketEventName}
+              </h4>
+              <p className="text-xs md:text-base">{props.ticketSubtitle}</p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <a href={props.ticketLinkInfo} className="px-3 py-1 uppercase border-2 md:py-2 md:px-4">
+              Info
+            </a>
+            <a  href={props.ticketLinkBuy} className="px-3 py-1 uppercase border-2 md:py-2 md:px-4">
+              Tickets
+            </a>
+          </div>
       </div>
-      <div className="flex items-center gap-16 font-light uppercase">
-        <p className="text-sm lg:text-xl">{props.ticketEventName}</p>
-        <a className="text-2xl lg:text-4xl font-oregano" href={props.ticketLink}>BUY</a>
-      </div>
+      <hr className="h-px mt-10 border-0 bg-stone-700" />
     </div>
   );
-}
+};
 
 export default Ticket;

@@ -1,34 +1,43 @@
 import React from "react";
 import Button from "./Button";
 import Ticket from "./Ticket";
-import { tickets,TourSectionTitle } from "../lib/Constants";
+import ticketsBg from "../assets/tickets-bg.webp";
+import { tickets, TourSectionTitle } from "../lib/Constants";
 
 const TourSection = () => {
+  const sectionStyle = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(${ticketsBg})`,
+    backgroundSize: "cover",
+  };
+  
   return (
-    <section className="container flex flex-row flex-wrap items-center justify-center gap-6 px-5 py-5 mx-auto text-white lg:px-20 lg:justify-between">
- <div className="flex flex-col items-center gap-8 py-10 mx-auto">
+    <section
+      className="flex-wrap items-center justify-center gap-6 px-5 py-5 mx-auto text-white bg-white containerflex lg:px-20 lg:justify-between"
+      style={sectionStyle}
+    >
+      <div className="flex flex-col items-center gap-8 py-10 mx-auto">
         <h2 className="text-3xl text-center text-white uppercase md:text-4xl font-epilogue">
-        {TourSectionTitle}
+          {TourSectionTitle}
         </h2>
         <div className="w-48 h-1 bg-redBarClr"></div>
       </div>
-      <div className="relative flex flex-col w-full gap-5"> 
-      {tickets.map((ticket, index) => (
+      <div className="flex flex-col items-center justify-center w-full gap-6">
+        {tickets.map((ticket, index) => (
           <Ticket
             key={index}
             ticketDate={ticket.date}
-            ticketLocation={ticket.location}
+            ticketSubtitle={ticket.subtitle}
             ticketEventName={ticket.eventName}
-            ticketLink={ticket.link}
+            ticketLinkBuy={ticket.linkBuy}
+            ticketLinkInfo={ticket.linkInfo}
           />
         ))}
       </div>
       <div className="flex justify-center w-full pt-6 tracking-widest uppercase lg:pt-8">
         <Button>More Tickets</Button>
       </div>
-      </section>
+    </section>
+  );
+};
 
-  )
-}
-
-export default TourSection
+export default TourSection;

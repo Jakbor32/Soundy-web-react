@@ -302,28 +302,32 @@ export const brandLogos = [
 export const TourSectionTitle = "Check the latest venues we will be at";
 export const tickets = [
   {
-    date: "10.11.2023",
-    location: "Warsaw, Poland",
+    date: "AUG 10 2023",
+    subtitle: "Warsaw, Poland",
     eventName: "Fretboard Fury",
-    link: "#",
+    linkInfo: "#",
+    linkBuy: "#",
   },
   {
-    date: "15.12.2023",
-    location: "New York, USA",
+    date: "DEC 15 2023",
+    subtitle: "New York, USA",
     eventName: "Guitar Extravaganza",
-    link: "#",
+    linkInfo: "#",
+    linkBuy: "#",
   },
   {
-    date: "20.01.2024",
-    location: "London, UK",
+    date: "JAN 20 2024",
+    subtitle: "London, UK",
     eventName: "Rock Revolution",
-    link: "#",
+    linkInfo: "#",
+    linkBuy: "#",
   },
   {
-    date: "05.03.2024",
-    location: "Paris, France",
+    date: "MAR 05 2024",
+    subtitle: "Paris, France",
     eventName: "Melody Mania",
-    link: "#",
+    linkInfo: "#",
+    linkBuy: "#",
   },
 ];
 
