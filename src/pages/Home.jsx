@@ -6,7 +6,7 @@ import {
   MusicSection,
   BrandSlider,
   TourSection,
-  PromotionsCarousel,
+  PromotionSection,
   ContactForm,
 } from "../components";
 
@@ -21,7 +21,7 @@ const Home = () => {
       <DividerLine />
       <TourSection />
       <DividerLine />
-      <PromotionsCarousel />
+      <PromotionSection />
       <DividerLine />
       <ContactForm />
     </>

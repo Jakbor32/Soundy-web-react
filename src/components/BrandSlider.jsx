@@ -9,7 +9,7 @@ const BrandSlider = () => {
     <section className="relative shadow-md bg-brandBarClr shadow-black">
       <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-white opacity-5"></div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white opacity-5"></div>
-      <div className="container flex flex-row  px-5 mx-auto md:px-20 h-24 items-center">
+      <div className="container flex flex-row items-center h-24 px-5 mx-auto md:px-20">
         <Splide
           aria-label="BrandSlider"
           extensions={{ AutoScroll }}

@@ -15,6 +15,7 @@ import {
   AiOutlineMail,
   AiOutlinePhone,
   AiOutlineEnvironment,
+  AiOutlinePlus,
 } from "react-icons/ai";
 import SoundyLogo from "../assets/soundy-logo.svg";
 import ImgCard1 from "../assets/festival.webp";
@@ -30,15 +31,13 @@ import appleMusicLogo from "../assets/apple-music-logo.svg";
 import soundCloudLogo from "../assets/soundcloud-logo.svg";
 import deezerLogo from "../assets/deezer-logo.svg";
 
-import cupImg from "../assets/soundy_cup.png";
-import tshirtImg from "../assets/soundy_t-shirt.png";
-import tshirtImg2 from "../assets/soundy_t-shirt2.png";
-
 import guitarHeroImg from "../assets/guitar-hero.webp";
 import powerOfStringImg from "../assets/power-of-strings.webp";
 import bluesJamImg from "../assets/blues-jam.webp";
 import shreddingImg from "../assets/shredding.webp";
 import stevieRayImg from "../assets/stevie-ray.webp";
+
+import guitarImg from "../assets/guitar-soundy.png";
 
 export const navLinks = [
   {
@@ -333,45 +332,26 @@ export const tickets = [
 
 // Promotions Section
 
-export const promotionSectionTitle = "Check the current promotions";
-export const promotionSlides = [
+export const promotionSectionTitle = "Check the current promotion";
+export const promotionItem = "Modern Guitar";
+export const promotionImg = guitarImg;
+export const bigSaleText = "big sale";
+export const describeItemText =
+  "Experience the joy of strumming the strings and producing enchanting tunes. Our promotional guitars come in various styles and finishesto suit your unique taste.";
+export const orderNow = "Order now";
+
+export const promotionFeatures = [
   {
-    title: "Quality",
-    description: "Style, warmth, and discount!",
-    customerTitle: "Customer review",
-    rating: [1, 2, 3, 4, 5],
-    discount: "14$",
-    price: "19$",
-    benefits: [
-      "Print/pattern options",
-      "Neckline style",
-      "Button or zipper closure",
-      "Embellishments",
-    ],
-    img: tshirtImg2,
-    imgDesc: "Soundy T-shirt",
+    icon: <AiOutlinePlus color="green" size={20} />,
+    text: "Soundy Logo",
   },
   {
-    title: "Comfort",
-    description: "T-shirt Revolution",
-    customerTitle: "Customer review",
-    rating: [1, 2, 3, 4],
-    discount: "11$",
-    price: "15$",
-    benefits: ["Color variety", "Sleeve length", "Stylee", "Breathability"],
-    img: tshirtImg,
-    imgDesc: "Soundy T-shirt",
+    icon: <AiOutlinePlus color="green" size={20} />,
+    text: "Clear Sounding",
   },
   {
-    title: "Stylish",
-    description: "Cup promotion at a great price!",
-    customerTitle: "Customer review",
-    rating: [1, 2, 3, 4],
-    discount: "20$",
-    price: "24$",
-    benefits: ["Durability", "Heat insulation", "Easy to clean", "Versatility"],
-    img: cupImg,
-    imgDesc: "Soundy Cup",
+    icon: <AiOutlinePlus color="green" size={20} />,
+    text: "Craftsmanship",
   },
 ];
 

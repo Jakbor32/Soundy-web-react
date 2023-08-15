@@ -7,7 +7,7 @@ import DividerLine from "./DividerLine";
 import BrandSlider from "./BrandSlider";
 import Ticket from "./Ticket";
 import TourSection from "./TourSection";
-import PromotionsCarousel from "./PromotionsCarousel";
+import PromotionSection from "./PromotionSection";
 import ContactForm from "./ContactForm";
 
 
@@ -21,6 +21,6 @@ export {
     BrandSlider,
     Ticket,
     TourSection,
-    PromotionsCarousel,
+    PromotionSection,
     ContactForm,
 };
