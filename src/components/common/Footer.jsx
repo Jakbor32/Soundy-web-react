@@ -10,7 +10,7 @@ import {
   newsletterTitle,
   footerLinks,
   linksTitle,
-} from "../lib/Constants";
+} from "../../lib/Constants";
 
 const Footer = () => {
   return (

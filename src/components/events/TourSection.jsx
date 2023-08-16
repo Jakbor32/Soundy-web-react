@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../common/Button";
 import Ticket from "./Ticket";
-import ticketsBg from "../assets/tickets-bg.webp";
-import { tickets, TourSectionTitle } from "../lib/Constants";
+import ticketsBg from "../../assets/tickets-bg.webp";
+import { tickets, TourSectionTitle } from "../../lib/Constants";
 
 const TourSection = () => {
   const sectionStyle = {

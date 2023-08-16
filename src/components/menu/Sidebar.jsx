@@ -7,7 +7,7 @@ import {
   navTexts,
   icons,
   logo,
-} from "../lib/Constants";
+} from "../../lib/Constants";
 
 const Sidebar = ({ open, setOpen }) => {
   const sidebarRef = useRef(null);
@@ -68,7 +68,7 @@ const Sidebar = ({ open, setOpen }) => {
               </li>
             ))}
           </ul>
-          <div className="flex justify-center w-full gap-4 px-2 opacity-50 my-10">
+          <div className="flex justify-center w-full gap-4 px-2 my-10 opacity-50">
             {socialLinks.map((link) => (
               <a key={link.id} href={link.url}>
                 {link.icon}

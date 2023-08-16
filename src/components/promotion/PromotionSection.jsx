@@ -9,7 +9,7 @@ import {
   describeItemText,
   orderNow,
   promotionFeatures,
-} from "../lib/Constants";
+} from "../../lib/Constants";
 
 const PromotionSection = () => {
   return (

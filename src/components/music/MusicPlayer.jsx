@@ -10,7 +10,7 @@ import {
 } from "react-icons/ai";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
-import { toastTexts } from "../lib/Constants";
+import { toastTexts } from "../../lib/Constants";
 
 const MusicPlayer = ({ musicData }) => {
   const [currentTrack, setCurrentTrack] = useState(0);

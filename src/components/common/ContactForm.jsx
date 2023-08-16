@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import contactFormBg from "../assets/contact-form-bg.jpg";
+import contactFormBg from "../../assets/contact-form-bg.jpg";
 import {
   contactInfo,
   contactFormSubtitle,
   contactFormTitle,
-} from "../lib/Constants";
+} from "../../lib/Constants";
 import { AiOutlineSend } from "react-icons/ai";
 
 const ContactForm = () => {

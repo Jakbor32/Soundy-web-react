@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./card/Card";
-import Button from "./Button";
-import { featuredNews } from "../lib/Constants";
+import Card from "../card/Card";
+import Button from "../common//Button";
+import { featuredNews } from "../../lib/Constants";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";

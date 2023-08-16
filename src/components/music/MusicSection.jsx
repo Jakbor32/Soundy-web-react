@@ -1,6 +1,6 @@
 import React from "react"
 import MusicPlayer from "./MusicPlayer";
-import { musicData, musicSectionTitle } from "../lib/Constants";;
+import { musicData, musicSectionTitle } from "../../lib/Constants";;
 
 const MusicSection = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { brandLogos } from "../lib/Constants";
+import { brandLogos } from "../../lib/Constants";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
