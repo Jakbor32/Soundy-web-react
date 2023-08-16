@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { navLinks, logo, icons, navTexts } from "../lib/Constants";
+import { navLinks, logo, icons, navTexts } from "../../lib/Constants";
 import Sidebar from "./Sidebar";
 
 const Navbar = () => {

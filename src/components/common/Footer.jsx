@@ -10,7 +10,7 @@ import {
   newsletterTitle,
   footerLinks,
   linksTitle,
-} from "../lib/Constants";
+} from "../../lib/Constants";
 
 const Footer = () => {
   return (
@@ -48,7 +48,7 @@ const Footer = () => {
                   id="8"
                   type="text"
                   placeholder={newsletterInputPlaceholder}
-                  class="relative h-14 w-full border-2 border-zinc-500  bg-featuredFooterBg pl-3 pr-36 font-thin outline-none "
+                  class="relative h-14 w-full border-2 border-zinc-500  bg-featuredFooterBg pl-3 pr-3 font-thin outline-none"
                 />
                 <button class="relative h-12 w-32 border-zinc-500 bg-footerBtnClr text-2xl font-bold  uppercase text-white sm:absolute sm:right-1 sm:border-l-2">
                   {submitButtonLabel}

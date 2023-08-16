@@ -11,25 +11,34 @@ import {
   AiOutlineDoubleLeft,
   AiOutlineLock,
   AiOutlineShopping,
-  AiOutlineCopyright,
   AiOutlineYoutube,
   AiOutlineMail,
   AiOutlinePhone,
   AiOutlineEnvironment,
+  AiOutlinePlus,
 } from "react-icons/ai";
 import SoundyLogo from "../assets/soundy-logo.svg";
 import ImgCard1 from "../assets/festival.webp";
 import ImgCard2 from "../assets/festival_2.webp";
 import ImgCard3 from "../assets/festival_3.webp";
+import ImgCard4 from "../assets/festival_4.webp";
+import ImgCard5 from "../assets/festival_5.webp";
 
 import spotifyLogo from "../assets/spotify-logo.svg";
 import youtubeLogo from "../assets/youtube-logo.svg";
 import tiktokLogo from "../assets/tiktok-logo.svg";
 import appleMusicLogo from "../assets/apple-music-logo.svg";
+import soundCloudLogo from "../assets/soundcloud-logo.svg";
+import deezerLogo from "../assets/deezer-logo.svg";
 
-import cupImg from "../assets/soundy_cup.png";
-import tshirtImg from "../assets/soundy_t-shirt.png";
-import tshirtImg2 from "../assets/soundy_t-shirt2.png";
+import guitarHeroImg from "../assets/guitar-hero.webp";
+import powerOfStringImg from "../assets/power-of-strings.webp";
+import bluesJamImg from "../assets/blues-jam.webp";
+import shreddingImg from "../assets/shredding.webp";
+import stevieRayImg from "../assets/stevie-ray.webp";
+
+import guitarImg from "../assets/guitar-soundy.png";
+
 export const navLinks = [
   {
     id: "/",
@@ -141,9 +150,8 @@ export const newsletterText =
 export const newsletterInputPlaceholder = "Enter your email address...";
 export const submitButtonLabel = "Submit";
 export const copyrightText = (
-  <p className="flex flex-row items-center gap-1 font-light text-center">
-    <AiOutlineCopyright />
-    2023 Borowy Jakub. All rights reserved.
+  <p className="font-light text-center">
+    &copy; 2023 Borowy Jakub. All rights reserved.
   </p>
 );
 export const linksTitle = "Links";
@@ -174,13 +182,18 @@ export const footerLinks = [
     label: "Contact",
     url: "#contact",
   },
+  {
+    id: "login",
+    label: "Login",
+    url: "#login",
+  },
 ];
 
 // Featured News
 
 export const featuredNews = [
   {
-    id: 1,
+    id: 0,
     image: ImgCard1,
     imageAlt: "festival-photo-1",
     dateNumber: "2023-04-03",
@@ -190,7 +203,7 @@ export const featuredNews = [
       "During their set, Soundy debuted several new songs from their upcoming album, which had been kept under wraps until that moment. Fans were thrilled to hear the fresh material.",
   },
   {
-    id: 2,
+    id: 1,
     image: ImgCard2,
     imageAlt: "festival-photo-2",
     dateNumber: "2023-07-05",
@@ -200,7 +213,7 @@ export const featuredNews = [
       "The crowd erupted with excitement as they immersed themselves in the fresh sounds and infectious rhythms. It was a night of sheer delight and a testament to Soundy's artistic evolution.",
   },
   {
-    id: 3,
+    id: 2,
     image: ImgCard3,
     imageAlt: "festival-photo-3",
     dateNumber: "2023-08-10",
@@ -209,18 +222,67 @@ export const featuredNews = [
     description:
       "The audience burst with anticipation as they surrendered to the captivating melodies. It became an evening of unadulterated joy and a testament to Soundy's creative growth.",
   },
+  {
+    id: 3,
+    image: ImgCard4,
+    imageAlt: "festival-photo-4",
+    dateNumber: "2023-06-21",
+    date: "WEDNESDAY, JUNE 21ST, 2023",
+    title: "Soundy's Electrifying Performance Leaves Fans Begging for More",
+    description:
+      "During their mesmerizing set, Soundy surprised their devoted fans with a series of unreleased tracks from their highly anticipated album. The air crackled with excitement as the audience reveled in the fresh, invigorating melodies.",
+  },
+  {
+    id: 4,
+    image: ImgCard5,
+    imageAlt: "festival-photo-5",
+    dateNumber: "2023-09-17",
+    date: "SUNDAY, SEPTEMBER 17TH, 2023",
+    title: "Soundy's Enthralling Gig Sets the Night Alight",
+    description:
+      "The night sky lit up with fervor as Soundy took the stage, unleashing an electrifying showcase of their latest compositions. Attendees were swept away by the pulsating beats and infectious energy, witnessing Soundy's artistic prowess in full bloom.",
+  },
 ];
 // Music Section
 
 export const musicSectionTitle = "Immerse Yourself in Our Music";
 
 export const musicData = [
-  "https://open.spotify.com/track/4hJ9GlqWQKgEU24yUbqDZB?si=49595976d03b4aa8",
-  "https://open.spotify.com/track/2Bhv2dpgjAfpJejQltrlOJ?si=4c6e80965b6a44e1",
-  "https://open.spotify.com/track/4mljaiRBQOvFCjcnzxlQ3F?si=d85d357f72b444ae",
-  "https://open.spotify.com/track/0vyzWCQaPRwaJPbRv9SB1q?si=20fcd0c799914f97",
-  "https://open.spotify.com/track/2RdwrJkx3swffe5ylzvfKR?si=4a50e8fa57e94f9e",
-  "https://open.spotify.com/track/6JRKroQWBkGk44TV4HbSl5?si=2c689ab481354f86",
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%20-%20Over%20The%20Sun%20(Pt.%202)%20%5BNCS%20Release%5D.mp3?alt=media&token=10f1469d-864b-4fab-a8c5-531cf3f55602",
+    imageUrl: guitarHeroImg,
+    artist: "Jimmy Hendrix",
+    title: "Guitar Hero",
+  },
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%2C%20Afterfab%2C%20Heleen%20-%20EX%20%5BNCS%20Release%5D.mp3?alt=media&token=d85e6cf3-495c-47d5-8845-fc96f36189f2",
+    imageUrl: powerOfStringImg,
+    artist: "Slash",
+    title: "The Power of Strings",
+  },
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%2C%20EBEN%2C%20Shiah%20Maisel%20-%20Ruined%20My%20Life%20%5BNCS%20Release%5D.mp3?alt=media&token=6ffc7f4e-a874-438f-9035-af63bed39384",
+    imageUrl: bluesJamImg,
+    artist: "Eric Clapton",
+    title: "Blues Jam",
+  },
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%2C%20KHEMIS%20-%20If%20Looks%20Can%20Kill%20%5BNCS%20Release%5D.mp3?alt=media&token=c2b0c858-f978-4d26-9993-077ed88df308",
+    imageUrl: shreddingImg,
+    artist: "Eddie Van Halen",
+    title: "Shredding in the Shadows",
+  },
+  {
+    audioUrl:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Coopex%2C%20Nito-Onna%20%26%20DJ%20Frog%20-%20Whispered%20Promises%20%5BNCS%20Release%5D.mp3?alt=media&token=f878657a-0be7-4efc-bb54-1b3d777c0f42",
+    imageUrl: stevieRayImg,
+    artist: "Stevie Ray Vaughan",
+    title: "Soulful Riffs",
+  },
 ];
 
 //  Brand Slider
@@ -230,6 +292,8 @@ export const brandLogos = [
   { src: youtubeLogo, alt: "YouTube Logo" },
   { src: tiktokLogo, alt: "TikTok Logo" },
   { src: appleMusicLogo, alt: "Apple Music Logo" },
+  { src: soundCloudLogo, alt: "SoundCloud Logo" },
+  { src: deezerLogo, alt: "Deezer Logo" },
 ];
 
 // Tour Section
@@ -237,72 +301,57 @@ export const brandLogos = [
 export const TourSectionTitle = "Check the latest venues we will be at";
 export const tickets = [
   {
-    date: "10.11.2023",
-    location: "Warsaw, Poland",
+    date: "AUG 10 2023",
+    subtitle: "Warsaw, Poland",
     eventName: "Fretboard Fury",
-    link: "#",
+    linkInfo: "#",
+    linkBuy: "#",
   },
   {
-    date: "15.12.2023",
-    location: "New York, USA",
+    date: "DEC 15 2023",
+    subtitle: "New York, USA",
     eventName: "Guitar Extravaganza",
-    link: "#",
+    linkInfo: "#",
+    linkBuy: "#",
   },
   {
-    date: "20.01.2024",
-    location: "London, UK",
+    date: "JAN 20 2024",
+    subtitle: "London, UK",
     eventName: "Rock Revolution",
-    link: "#",
+    linkInfo: "#",
+    linkBuy: "#",
   },
   {
-    date: "05.03.2024",
-    location: "Paris, France",
+    date: "MAR 05 2024",
+    subtitle: "Paris, France",
     eventName: "Melody Mania",
-    link: "#",
+    linkInfo: "#",
+    linkBuy: "#",
   },
 ];
 
 // Promotions Section
 
-export const promotionSectionTitle = "Check the current promotions";
-export const promotionSlides = [
+export const promotionSectionTitle = "Check the current promotion";
+export const promotionItem = "Modern Guitar";
+export const promotionImg = guitarImg;
+export const bigSaleText = "big sale";
+export const describeItemText =
+  "Experience the joy of strumming the strings and producing enchanting tunes. Our promotional guitars come in various styles and finishesto suit your unique taste.";
+export const orderNow = "Order now";
+
+export const promotionFeatures = [
   {
-    title: "Quality",
-    description: "Style, warmth, and discount!",
-    customerTitle: "Customer review",
-    rating: [1, 2, 3, 4, 5],
-    discount: "14$",
-    price: "19$",
-    benefits: [
-      "Print/pattern options",
-      "Neckline style",
-      "Button or zipper closure",
-      "Embellishments",
-    ],
-    img: tshirtImg2,
-    imgDesc: "Soundy T-shirt",
+    icon: <AiOutlinePlus color="green" size={20} />,
+    text: "Soundy Logo",
   },
   {
-    title: "Comfort",
-    description: "T-shirt Revolution",
-    customerTitle: "Customer review",
-    rating: [1, 2, 3, 4],
-    discount: "11$",
-    price: "15$",
-    benefits: ["Color variety", "Sleeve length", "Stylee", "Breathability"],
-    img: tshirtImg,
-    imgDesc: "Soundy T-shirt",
+    icon: <AiOutlinePlus color="green" size={20} />,
+    text: "Clear Sounding",
   },
   {
-    title: "Stylish",
-    description: "Cup promotion at a great price!",
-    customerTitle: "Customer review",
-    rating: [1, 2, 3, 4],
-    discount: "20$",
-    price: "24$",
-    benefits: ["Durability", "Heat insulation", "Easy to clean", "Versatility"],
-    img: cupImg,
-    imgDesc: "Soundy Cup",
+    icon: <AiOutlinePlus color="green" size={20} />,
+    text: "Craftsmanship",
   },
 ];
 
@@ -327,5 +376,40 @@ export const contactInfo = [
   {
     icon: <AiOutlineYoutube size={28} />,
     text: "@SoundyOfficial",
+  },
+];
+
+// NCS
+
+export const toastTexts = [
+  {
+    songTitle: "Coopex, Afterfab, Heleen - EX [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://ncs.io/CAH_EX",
+    watchLink: "http://ncs.lnk.to/CAH_EXAT/youtube",
+  },
+  {
+    songTitle: "Coopex - Over The Sun (Pt. 2) [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://ncs.io/OTS_EP",
+    watchLink: "http://ncs.lnk.to/OTS_EPAT/youtube",
+  },
+  {
+    songTitle: "Coopex, KHEMIS - If Looks Can Kill [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://ncs.io/IfLooksCanKill",
+    watchLink: "http://NCS.lnk.to/IfLooksCanKillAT/youtube",
+  },
+  {
+    songTitle: "Coopex, Nito-Onna & DJ Frog - Whispered Promises [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://NCS.io/WhisperedPromises",
+    watchLink: "http://youtu.be/xwcwExC4t7w",
+  },
+  {
+    songTitle: "Coopex, EBEN, Shiah Maisel - Ruined My Life [NCS Release]",
+    musicInfo: "Music provided by NoCopyrightSounds",
+    freeDownloadLink: "http://ncs.io/RuinedMyLife",
+    watchLink: "http://youtu.be/pB8ZNnNHWyU",
   },
 ];

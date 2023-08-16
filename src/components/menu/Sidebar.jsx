@@ -7,7 +7,7 @@ import {
   navTexts,
   icons,
   logo,
-} from "../lib/Constants";
+} from "../../lib/Constants";
 
 const Sidebar = ({ open, setOpen }) => {
   const sidebarRef = useRef(null);
@@ -38,17 +38,17 @@ const Sidebar = ({ open, setOpen }) => {
     <>
       <aside
         ref={sidebarRef}
-        className={`scrollbar-none fixed left-0 top-0 z-40  h-screen w-48 overflow-y-auto bg-slate-950 pt-5 shadow-lg transition-transform duration-500 ${
+        className={`fixed left-0 top-0 z-40 h-screen w-48 overflow-y-auto bg-slate-950 pt-5 shadow-lg transition-transform duration-500 ${
           open ? "animate-slide-in" : "animate-slide-out"
         }`}
       >
         <div
           open={open}
-          className="fixed left-0 top-0 z-40 h-screen min-h-[32rem] w-48 bg-slate-950 pt-3 shadow-lg"
+          className="fixed top-0 left-0 z-40 w-48 h-full pt-3 shadow-lg"
         >
           <div
             onClick={closeSidebar}
-            className="m-3 flex w-max cursor-pointer items-center rounded-full bg-slate-700 px-3 py-1 font-light hover:bg-slate-800"
+            className="flex items-center px-3 py-1 m-3 font-light rounded-full cursor-pointer w-max bg-slate-700 hover:bg-slate-800"
           >
             {icons[0].doubleLeftArrow}
             <button>{navTexts.closeMenu}</button>
@@ -68,24 +68,21 @@ const Sidebar = ({ open, setOpen }) => {
               </li>
             ))}
           </ul>
-          <div className="absolute bottom-0 flex w-full justify-center px-3 py-10 ">
-            <img src={logo[0].path} alt={logo[0].desc} />
-          </div>
-          <div className="absolute bottom-0 flex w-full justify-center gap-4 px-2 py-2 opacity-50 ">
+          <div className="flex justify-center w-full gap-4 px-2 my-10 opacity-50">
             {socialLinks.map((link) => (
               <a key={link.id} href={link.url}>
                 {link.icon}
               </a>
             ))}
           </div>
-          <div className="absolute right-0 top-0 px-3 py-3 ">
+          <div className="absolute top-0 right-0 px-3 py-3 ">
             <a href={links.github.url}>{links.github.icon}</a>
           </div>
         </div>
       </aside>
       <div
         onClick={closeSidebar}
-        className="fixed left-0 top-0 h-screen w-screen bg-black opacity-80"
+        className="fixed top-0 left-0 w-screen h-screen bg-black opacity-80"
       ></div>
     </>
   );

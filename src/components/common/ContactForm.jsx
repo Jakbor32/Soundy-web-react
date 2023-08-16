@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import contactFormBg from "../assets/contact-form-bg.jpg";
+import contactFormBg from "../../assets/contact-form-bg.jpg";
 import {
   contactInfo,
   contactFormSubtitle,
   contactFormTitle,
-} from "../lib/Constants";
+} from "../../lib/Constants";
 import { AiOutlineSend } from "react-icons/ai";
 
 const ContactForm = () => {
@@ -60,9 +60,9 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="relative px-5 py-10 overflow-hidden lg:px-0">
-      <div className="absolute top-0 left-0 w-full h-full ">
+      <div className="absolute top-0 left-0 w-full h-full">
         <img
-          className="object-cover w-full h-full opacity-5"
+          className="object-cover w-full h-full opacity-10"
           src={contactFormBg}
           alt="Dark background"
         />
@@ -96,7 +96,7 @@ const ContactForm = () => {
                   name={inputName}
                   id={inputName}
                   type="text"
-                  className={`bg-transparent border-b-2 outline-none sm:w-96 w-full ${
+                  className={`bg-transparent border-b-2 outline-none sm:w-96 w-full focus:ring-0 focus:bg-transparent ${
                     isInputActive(inputName) ? "" : "opacity-50"
                   } transition-all duration-500`}
                   onClick={() => handleInputClick(inputName)}

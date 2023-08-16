@@ -1,14 +1,14 @@
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import Footer from "./Footer";
-import NewsSection from "./NewsSection";
-import MusicSection from "./MusicSection";
-import DividerLine from "./DividerLine";
-import BrandSlider from "./BrandSlider";
-import Ticket from "./Ticket";
-import TourSection from "./TourSection";
-import PromotionsCarousel from "./PromotionsCarousel";
-import ContactForm from "./ContactForm";
+import Navbar from "./menu/Navbar";
+import Hero from "./common/Hero";
+import Footer from "./common/Footer";
+import NewsSection from "./news/NewsSection";
+import MusicSection from "./music/MusicSection";
+import DividerLine from "./common/DividerLine";
+import BrandSlider from "./common/BrandSlider";
+import Ticket from "./events/Ticket";
+import TourSection from "./events/TourSection";
+import PromotionSection from "./promotion/PromotionSection";
+import ContactForm from "./common/ContactForm";
 
 
 export {
@@ -21,6 +21,6 @@ export {
     BrandSlider,
     Ticket,
     TourSection,
-    PromotionsCarousel,
+    PromotionSection,
     ContactForm,
 };
