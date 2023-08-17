@@ -8,7 +8,7 @@ import BrandSlider from "./common/BrandSlider";
 import Ticket from "./events/Ticket";
 import TourSection from "./events/TourSection";
 import PromotionSection from "./promotion/PromotionSection";
-import ContactForm from "./common/ContactForm";
+import ContactForm from "./contactform/ContactForm";
 
 
 export {
