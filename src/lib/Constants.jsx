@@ -9,6 +9,7 @@ import {
 
 import {
   AiOutlineDoubleLeft,
+  AiOutlineDoubleRight,
   AiOutlineLock,
   AiOutlineShopping,
   AiOutlineYoutube,
@@ -122,6 +123,9 @@ export const icons = [
   {
     bars: <FaBars size={20} />,
   },
+  {
+    doubleRightArrow: <AiOutlineDoubleRight className="ml-2" />,
+  }
 ];
 export const logo = [
   {

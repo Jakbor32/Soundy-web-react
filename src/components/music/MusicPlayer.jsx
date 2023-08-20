@@ -8,7 +8,7 @@ import {
   AiOutlinePause,
   AiOutlineInfoCircle,
 } from "react-icons/ai";
-import toast, { Toaster } from "react-hot-toast";
+import toast, { Toaster, useToasterStore } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { toastTexts } from "../../lib/Constants";
 
@@ -17,6 +17,19 @@ const MusicPlayer = ({ musicData }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const audioRef = useRef(null);
+
+
+  
+  // Toast Limiter
+  const { toasts } = useToasterStore();
+  const TOAST_LIMIT = 1;
+  
+  useEffect(() => {
+    toasts
+      .filter((t) => t.visible) 
+      .filter((_, i) => i >= TOAST_LIMIT)
+      .forEach((t) => toast.dismiss(t.id)); 
+  }, [toasts]);
 
   const ToastWithLink = ({ index }) => (
     <div>

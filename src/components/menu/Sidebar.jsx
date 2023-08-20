@@ -6,7 +6,6 @@ import {
   links,
   navTexts,
   icons,
-  logo,
 } from "../../lib/Constants";
 
 const Sidebar = ({ open, setOpen }) => {
@@ -14,7 +13,7 @@ const Sidebar = ({ open, setOpen }) => {
 
   // Close the sidebar with animate
   const closeSidebar = () => {
-    sidebarRef.current.classList.add("animate-slide-out");
+    sidebarRef.current.classList.add("animate-slide-out-right");
     setTimeout(() => {
       setOpen(false);
     }, 250);
@@ -39,7 +38,7 @@ const Sidebar = ({ open, setOpen }) => {
       <aside
         ref={sidebarRef}
         className={`fixed left-0 top-0 z-40 h-screen w-48 overflow-y-auto bg-slate-950 pt-5 shadow-lg transition-transform duration-500 ${
-          open ? "animate-slide-in" : "animate-slide-out"
+          open ? "animate-slide-in-right" : "animate-slide-out-right"
         }`}
       >
         <div
