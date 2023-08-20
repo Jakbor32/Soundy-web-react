@@ -7,7 +7,7 @@ export const useCartContext = () => {
 };
 
 const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([1]);
+  const [cartItems, setCartItems] = useState([]);
 
   return (
     <CartContext.Provider value={{ cartItems }}>
