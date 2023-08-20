@@ -3,11 +3,15 @@ import { icons } from "../../lib/Constants";
 import CartItem from "./CartItem";
 import StepIndicator from "./StepIndicator";
 import { useCartContext } from "./CartContext";
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "../auth/Login";
 
 const Cart = ({ openCart, setOpenCart }) => {
   const cartRef = useRef(null);
   const [currentStepCart, setCurrentStepCart] = useState(0);
   const { cartItems } = useCartContext();
+
+  const { isAuthenticated } = useAuth0();
 
   // Close the cart with animate
   const closeCart = () => {
@@ -50,79 +54,93 @@ const Cart = ({ openCart, setOpenCart }) => {
             <button>Close cart</button>
             {icons[4].doubleRightArrow}
           </div>
-
-          <div className="flex flex-col items-center justify-center w-full px-5 mt-20 sm:px-10">
-            <StepIndicator currentStepCart={currentStepCart} />
-
-            <div className="flex flex-col w-full h-full gap-5 mt-5">
-              {cartItems.length === 0 ? (
-                <p className="py-5 text-xl text-center">Your cart is empty</p>
-              ) : (
-                cartItems.map((item, index) => <CartItem key={index} />)
-              )}
-            </div>
+          {!isAuthenticated && (
+            <div>
+          <p className="flex flex-col items-center justify-center w-full px-5 mt-20 text-center sm:px-10">Access to this section is restricted to logged-in users only. Please log in or sign in to view the content.</p>
+          <div className="flex justify-center mt-5">
+          <LoginButton />
           </div>
-          <div className="px-5 sm:px-10">
-            <div className="mt-10">
-              {cartItems.length === 0 ? null : (
-                <>
-                  <p className="pb-3">Coupons</p>
-                  <div className="flex justify-between p-3 border rounded-lg">
-                    <div>Enter your coupon code</div>
-                    <input type="text" className="w-20 px-2 text-black" />
-                  </div>
-                </>
-              )}
-            </div>
-            <div className="mt-10">
-              {cartItems.length === 0 ? null : (
-                <>
-                  <p className="pb-3">Gifting</p>
-                  <div className="flex flex-col justify-between p-3 border rounded-lg bg-slate-500">
-                    <div>Buying for a loved one</div>
-                    <div>Send personalized message at $20</div>
-                    <a className="text-green-600" href="">
-                      Add gift wrap
-                    </a>
-                  </div>
-                </>
-              )}
-            </div>
-            <div className="mt-10">
-              {cartItems.length === 0 ? null : (
-                <>
-                  <p className="pb-3">Price Details</p>
-                  <div className="flex flex-col justify-between p-3 border rounded-lg bg-slate-500">
-                    <div>1 item</div>
-                    <div className="flex justify-between">
-                      <div>Name of item</div>
-                      <div>$45.20</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Coupon discount</div>
-                      <div>$2.50</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Delivery Charges</div>
-                      <div>Free Delivery</div>
-                    </div>
-                    <br />
-                    <hr />
-                    <br />
-                    <div className="flex justify-between">
-                      <div>Total Amount</div>
-                      <div>$43.20</div>
-                    </div>
-                  </div>
-                  <button className="w-full px-5 py-3 mt-10 mb-24 bg-gray-700 border-2 rounded-lg">
-                    Place order
-                  </button>
-                </>
-              )}
-            </div>
           </div>
+          )}
+          {isAuthenticated && (
+            <div>
+              <div className="flex flex-col items-center justify-center w-full px-5 mt-20 sm:px-10">
+                <StepIndicator currentStepCart={currentStepCart} />
+
+                <div className="flex flex-col w-full h-full gap-5 mt-5">
+                  {cartItems.length === 0 ? (
+                    <p className="py-5 text-xl text-center">
+                      Your cart is empty
+                    </p>
+                  ) : (
+                    cartItems.map((item, index) => <CartItem key={index} />)
+                  )}
+                </div>
+              </div>
+              <div className="px-5 sm:px-10">
+                <div className="mt-10">
+                  {cartItems.length === 0 ? null : (
+                    <>
+                      <p className="pb-3">Coupons</p>
+                      <div className="flex justify-between p-3 border rounded-lg">
+                        <div>Enter your coupon code</div>
+                        <input type="text" className="w-20 px-2 text-black" />
+                      </div>
+                    </>
+                  )}
+                </div>
+                <div className="mt-10">
+                  {cartItems.length === 0 ? null : (
+                    <>
+                      <p className="pb-3">Gifting</p>
+                      <div className="flex flex-col justify-between p-3 border rounded-lg bg-slate-500">
+                        <div>Buying for a loved one</div>
+                        <div>Send personalized message at $20</div>
+                        <a className="text-green-600" href="">
+                          Add gift wrap
+                        </a>
+                      </div>
+                    </>
+                  )}
+                </div>
+                <div className="mt-10">
+                  {cartItems.length === 0 ? null : (
+                    <div>
+                      <p className="pb-3">Price Details</p>
+                      <div className="flex flex-col justify-between p-3 border rounded-lg bg-slate-500">
+                        <div>1 item</div>
+                        <div className="flex justify-between">
+                          <div>Name of item</div>
+                          <div>$45.20</div>
+                        </div>
+                        <div className="flex justify-between">
+                          <div>Coupon discount</div>
+                          <div>$2.50</div>
+                        </div>
+                        <div className="flex justify-between">
+                          <div>Delivery Charges</div>
+                          <div>Free Delivery</div>
+                        </div>
+                        <br />
+                        <hr />
+                        <br />
+                        <div className="flex justify-between">
+                          <div>Total Amount</div>
+                          <div>$43.20</div>
+                        </div>
+                      </div>
+                      <button className="w-full px-5 py-3 mt-10 mb-24 bg-gray-700 border-2 rounded-lg">
+                        Place order
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
+
       <div
         onClick={closeCart}
         className="fixed top-0 right-0 w-screen h-screen bg-black opacity-80"

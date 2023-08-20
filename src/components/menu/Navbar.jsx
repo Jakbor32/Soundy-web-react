@@ -3,6 +3,8 @@ import { navLinks, logo, icons, navTexts } from "../../lib/Constants";
 import Sidebar from "./Sidebar";
 import Cart from "../cart/Cart";
 import { useCartContext } from "../cart/CartContext";
+import LoginButton from "../auth/Login";
+import LogoutButton from "../auth/Logout";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -75,15 +77,8 @@ const Navbar = () => {
               {icons[2].shoppingCart}
             </div>
           </div>
-          <button className="flex items-center border border-white">
-            <div className="pl-3">{icons[1].lock}</div>
-            <a
-              href="#"
-              className="mr-2 py-2 pl-1 pr-2 text-[0.65rem] font-bold tracking-wider md:text-xs"
-            >
-              {navTexts.login}
-            </a>
-          </button>
+          <LoginButton />
+          <LogoutButton />
         </div>
         <div className="items-center justify-between hidden w-full md:order-1 md:flex md:w-auto">
           <ul className="flex flex-col mt-4 font-medium md:mt-0 md:flex-row md:gap-7 ">

@@ -11,6 +11,7 @@ import {
   AiOutlineDoubleLeft,
   AiOutlineDoubleRight,
   AiOutlineLock,
+  AiOutlineUnlock,
   AiOutlineShopping,
   AiOutlineYoutube,
   AiOutlineMail,
@@ -114,7 +115,7 @@ export const icons = [
     doubleLeftArrow: <AiOutlineDoubleLeft className="mr-2" />,
   },
   {
-    lock: <AiOutlineLock />,
+    lock: <AiOutlineLock fontSize={18} />,
   },
 
   {
@@ -125,7 +126,10 @@ export const icons = [
   },
   {
     doubleRightArrow: <AiOutlineDoubleRight className="ml-2" />,
-  }
+  },
+  {
+    unlock: <AiOutlineUnlock fontSize={18} />,
+  },
 ];
 export const logo = [
   {
@@ -186,11 +190,7 @@ export const footerLinks = [
     label: "Contact",
     url: "#contact",
   },
-  {
-    id: "login",
-    label: "Login",
-    url: "#login",
-  },
+
 ];
 
 // Featured News
