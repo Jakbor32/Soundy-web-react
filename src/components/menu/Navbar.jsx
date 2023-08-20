@@ -1,14 +1,20 @@
 import { useState, useEffect } from "react";
 import { navLinks, logo, icons, navTexts } from "../../lib/Constants";
 import Sidebar from "./Sidebar";
+import Cart from "../cart/Cart";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [openCart, setOpenCart] = useState(false);
 
   const handleMenuOpen = () => {
     setOpen(true);
   };
+  const handleOpenCart = () => {
+    setOpenCart(true);
+  };
+
 
   // Navbar scroll detection
   useEffect(() => {
@@ -29,12 +35,12 @@ const Navbar = () => {
 
   // Body overflow control
   useEffect(() => {
-    if (open) {
+    if (open || openCart) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-  }, [open]);
+  }, [open,openCart]);
 
   return (
     <nav
@@ -59,7 +65,10 @@ const Navbar = () => {
         </div>
         <div className="flex flex-row items-center gap-3 md:order-2">
           <div className="text-xl md:text-2xl">
-            <a href="">{icons[2].shoppingCart}</a>
+            <div className="relative cursor-pointer" onClick={handleOpenCart}>
+              <div className="absolute grid w-4 h-4 text-sm bg-red-800 rounded-full sm:h-5 sm:w-5 right-3 bottom-3 place-content-center">5</div>
+            {icons[2].shoppingCart}
+            </div>
           </div>
           <button className="flex items-center border border-white">
             <div className="pl-3">{icons[1].lock}</div>
@@ -88,6 +97,8 @@ const Navbar = () => {
         </div>
       </div>
       {open && <Sidebar open={open} setOpen={setOpen} />}
+      {openCart && <Cart openCart={openCart} setOpenCart={setOpenCart} />}
+      
     </nav>
   );
 };
