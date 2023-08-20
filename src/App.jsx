@@ -9,6 +9,7 @@ import Media from "./pages/Media";
 import Tour from "./pages/Tour";
 import Store from "./pages/Store";
 import PageNotFound from "./pages/PageNotFound";
+import CartProvider from "./components/cart/CartContext";
 
 const App = () => (
   <>
@@ -16,7 +17,9 @@ const App = () => (
       <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16} />
       <link rel="icon" type="image/x-icon" href={faviconICO} />
     </Helmet>
-    <Navbar />
+    <CartProvider>
+      <Navbar />
+    </CartProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
