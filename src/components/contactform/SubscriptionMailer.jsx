@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import {
   newsletterInputPlaceholder,
   submitButtonLabel,
@@ -78,7 +78,7 @@ const SubscriptionMailer = () => {
           >
             {submitButtonLabel}
           </button>
-          <Toaster />
+       
         </div>
       </form>
     </div>
