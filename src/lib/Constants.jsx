@@ -190,7 +190,6 @@ export const footerLinks = [
     label: "Contact",
     url: "#contact",
   },
-
 ];
 
 // Featured News
@@ -416,4 +415,40 @@ export const toastTexts = [
     freeDownloadLink: "http://ncs.io/RuinedMyLife",
     watchLink: "http://youtu.be/pB8ZNnNHWyU",
   },
+];
+
+export const galleryData = [
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-23.webp?alt=media&token=0fac22d8-7c07-41e1-8b09-07cfcf83485e",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-29.webp?alt=media&token=5204296c-a0b7-421b-add8-4a6b5bc4da88",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-27.webp?alt=media&token=e6ded1a6-3f62-4a3d-93e8-8876bf1818ac",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-26.webp?alt=media&token=75a17f11-7586-458f-a896-3c3ae1f10ab6",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-1.webp?alt=media&token=035aa9e0-83d9-4757-8791-68ca9e629a60",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-5.webp?alt=media&token=7fd091f4-1659-4c8b-b39f-2506214763fe",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-7.webp?alt=media&token=b982f7c4-576b-4eb3-9a11-4780f57d7641",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-2.webp?alt=media&token=79f68364-f87b-4bd1-b18d-3ca75d299df9",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-3.webp?alt=media&token=6bb2d6a3-6ad0-4e48-b48f-4974a3d47755",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-4.webp?alt=media&token=e1a210ce-4a72-43c9-81b7-d633721260dc",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-13.webp?alt=media&token=b7d3c113-a113-47fa-b773-30700116a4f8",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-6.webp?alt=media&token=a1d2764a-9f8b-4ff3-ae51-a8e15fa1ab92",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-8.webp?alt=media&token=3b334863-c1b2-4f98-a6ad-66af4da9f64d",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-10.webp?alt=media&token=211db582-45c0-4d03-b869-10a91e8f9488",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-11.webp?alt=media&token=216d885d-d027-4662-8da8-96dbfb1c8a2a",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-9.webp?alt=media&token=11cc89e0-1409-4323-9f15-4c67bf73998c",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-12.webp?alt=media&token=1ff8a3f1-9aa5-4590-bbec-0cf039a78af6",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-16.webp?alt=media&token=7c9397e7-5cda-4678-9475-3c0be34fe31e",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-22.webp?alt=media&token=6b7c7d0e-e36a-4385-a380-62ab30006caa",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-14.webp?alt=media&token=de8a324d-38fe-45fa-8542-6b71f358d368",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-15.webp?alt=media&token=0c6b1f85-c649-4962-86c3-44fa191f11cb",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-25.webp?alt=media&token=b038a859-035d-4894-b2e5-53694ce5c29d",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-19.webp?alt=media&token=c64fe565-6123-43f6-a21b-e38d7454db36",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-18.webp?alt=media&token=633ed463-27ba-45f0-9be4-ce310ceab197",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-30.webp?alt=media&token=bfec90dd-5c7f-4055-a9b4-902f74ff984b",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-20.webp?alt=media&token=73805e9b-b036-456b-9c98-7990ce96a4a3",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-17.webp?alt=media&token=eab45ba5-b28f-4820-932f-3ab6f0afa065",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-24.webp?alt=media&token=d0895ae7-1d4a-462a-993d-52227d5eacde",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-21.webp?alt=media&token=d437bbe3-36f0-43a3-bf1e-dbdcfff15fff",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-31.webp?alt=media&token=9a029b17-f6e7-49f3-a833-1e838ff0518c",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-28.webp?alt=media&token=3e1aa323-b9ed-42e4-a4cf-178029ba20a8",
+  "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-10.webp?alt=media&token=211db582-45c0-4d03-b869-10a91e8f9488",
+
 ];
