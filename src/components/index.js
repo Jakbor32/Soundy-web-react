@@ -10,6 +10,7 @@ import TourSection from "./events/TourSection";
 import PromotionSection from "./promotion/PromotionSection";
 import ContactForm from "./contactform/ContactForm";
 import Gallery from "./media/Gallery";
+import Video from "./media/Video"
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   PromotionSection,
   ContactForm,
   Gallery,
+  Video,
 };

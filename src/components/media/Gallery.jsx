@@ -15,7 +15,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="container mx-auto mt-32 lg:px-20 px-0">
+    <div className="container px-0 mx-auto mt-32 lg:px-20">
       <Masonry
         breakpointCols={responsive}
         className="my-masonry-grid"
@@ -26,9 +26,10 @@ const Gallery = () => {
             src={image}
             height={500}
             width={200}
-            className="w-full h-auto py-3 sm:px-0 px-5"
+            className="w-full h-auto px-5 py-3 sm:px-0"
             effect="blur"
             alt={`Soundy-Image-${index + 1}`}
+            key={`Soundy-Image-${index + 1}`}
           />
         ))}
       </Masonry>

@@ -452,3 +452,97 @@ export const galleryData = [
   "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-10.webp?alt=media&token=211db582-45c0-4d03-b869-10a91e8f9488",
 
 ];
+export const titleVideo = "Our Video Collection"
+export const videoData = [
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-6.webp?alt=media&token=1e9e0e03-5d68-424b-b60a-ad4dd4c1c5a2",
+    title: "Under the Starry Sky",
+    videoSrc: "https://www.youtube.com/watch?v=xO_x0DAhUT4&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-7.webp?alt=media&token=c9825c1d-ccfb-4230-ae39-9fc61e565fdf",
+    title: "I've Waited So Long",
+    videoSrc: "https://www.youtube.com/watch?v=ngvt3OHx7zQ&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-8.webp?alt=media&token=f4286c03-fb88-4e8c-abd8-3329a5061291",
+    title: "Whisper in the Night",
+    videoSrc: "https://www.youtube.com/watch?v=jOe7JtsTLiM&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-9.webp?alt=media&token=b9148715-2207-46eb-b7de-301d392b359a",
+    title: "Worth More?",
+    videoSrc: "https://www.youtube.com/watch?v=q9X9g2t67PM&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-16.webp?alt=media&token=325217f9-2c3d-402d-b143-fc2822d0f7dc",
+    title: "Nostalgic Melody",
+    videoSrc: "https://www.youtube.com/watch?v=nS9dImtaqLk&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-17.webp?alt=media&token=fc6311de-c731-48c4-b93c-092b3efec2bc",
+    title: "Love's Arrow",
+    videoSrc: "https://www.youtube.com/watch?v=Tcinagiy0hM&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-18.webp?alt=media&token=ae4ca047-d4e8-40aa-aa28-3c713e3c583c",
+    title: "Wind in My Hair",
+    videoSrc: "https://www.youtube.com/watch?v=kI4usARVdaU&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-2.webp?alt=media&token=c9d0650c-93c7-4861-8730-97cd3df88961",
+    title: "Magical Moments",
+    videoSrc: "https://www.youtube.com/watch?v=iPyg-QknNeY&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-3.webp?alt=media&token=96e83c07-22f7-4d61-a970-f2222d4c3146",
+    title: "Secrets of the Heart",
+    videoSrc: "https://www.youtube.com/watch?v=rpPiFMcjF6M&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-4.webp?alt=media&token=1bfee79f-6611-49fd-a9ec-ce4ba6c96774",
+    title: "Somewhere...",
+    videoSrc: "https://www.youtube.com/watch?v=VtMCHahEpSg&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-5.webp?alt=media&token=8c681733-69b4-48bb-a63c-12a4df268dc5",
+    title: "Clouds of Dreams",
+    videoSrc: "https://www.youtube.com/watch?v=FsnluXPC6s0&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-1.webp?alt=media&token=ffe1e926-5425-411e-bcdd-97dc81ffb1c6",
+    title: "Midst of the Storm",
+    videoSrc: "https://www.youtube.com/watch?v=dqC5x7cwwl0&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-10.webp?alt=media&token=7dbc23bd-bac6-4ab5-8dfc-326ae9c7f2c9",
+    title: "Taste of Freedom",
+    videoSrc: "https://www.youtube.com/watch?v=_f7UMIEaf9A&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-11.webp?alt=media&token=3cd6094f-7e86-45e6-9d4f-96a9d3c7e813",
+    title: "Light in the Darkness",
+    videoSrc: "https://www.youtube.com/watch?v=FguBcUk9XP4&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-12.webp?alt=media&token=f2bbb7cb-3416-4f2c-b92e-fdd32c3009dc",
+    title: "A Stroll in the Rain",
+    videoSrc: "https://www.youtube.com/watch?v=F5onIgMSyVg&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-13.webp?alt=media&token=e6c459a2-5acd-4562-af28-b0f3c1ccd04e",
+    title: "Searching for Meaning",
+    videoSrc: "https://www.youtube.com/watch?v=iPyg-QknNeY&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-14.webp?alt=media&token=a4b94e3c-5c78-47c7-b9bb-a1dec65dbdc2",
+    title: "Flame of Love",
+    videoSrc: "https://www.youtube.com/watch?v=_OLrjAWzUR0&ab_channel=NoCopyrightSounds",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-15.webp?alt=media&token=4c359adf-863e-48a4-9ae1-9abfdc761e41",
+    title: "Footprints in the Sand",
+    videoSrc: "https://www.youtube.com/watch?v=l0NMbZHqMDk&ab_channel=NoCopyrightSounds",
+  },
+];
+
