@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Gallery, DividerLine, Video } from "../components";
 
 const Media = () => {
   return (
-    <div>Media</div>
-  )
-}
+    <>
+      <Gallery />
+      <DividerLine />
+      <Video />
+    </>
+  );
+};
 
-export default Media
+export default Media;
