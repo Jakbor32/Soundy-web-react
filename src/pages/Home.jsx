@@ -8,6 +8,7 @@ import {
   TourSection,
   PromotionSection,
   ContactForm,
+  ScrollToTop,
 } from "../components";
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <PromotionSection />
       <DividerLine />
       <ContactForm />
+      <ScrollToTop />
     </>
   );
 };

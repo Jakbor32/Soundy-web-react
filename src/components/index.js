@@ -10,7 +10,8 @@ import TourSection from "./events/TourSection";
 import PromotionSection from "./promotion/PromotionSection";
 import ContactForm from "./contactform/ContactForm";
 import Gallery from "./media/Gallery";
-import Video from "./media/Video"
+import Video from "./media/Video";
+import ScrollToTop from "./common/ScrollToTop";
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   ContactForm,
   Gallery,
   Video,
+  ScrollToTop,
 };

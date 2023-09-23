@@ -1,5 +1,5 @@
 import React from "react";
-import { Gallery, DividerLine, Video } from "../components";
+import { Gallery, DividerLine, Video, ScrollToTop } from "../components";
 
 const Media = () => {
   return (
@@ -7,6 +7,7 @@ const Media = () => {
       <Gallery />
       <DividerLine />
       <Video />
+      <ScrollToTop />
     </>
   );
 };
