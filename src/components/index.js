@@ -12,6 +12,10 @@ import ContactForm from "./contactform/ContactForm";
 import Gallery from "./media/Gallery";
 import Video from "./media/Video";
 import ScrollToTop from "./common/ScrollToTop";
+import HeroVideo from "./aboutus/HeroVideo";
+import TeamMemberCard from "./aboutus/TeamMemberCard";
+import TeamMembers from "./aboutus/TeamMembers";
+
 
 export {
   Navbar,
@@ -28,4 +32,7 @@ export {
   Gallery,
   Video,
   ScrollToTop,
+  HeroVideo,
+  TeamMemberCard,
+  TeamMembers,
 };
