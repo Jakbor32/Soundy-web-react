@@ -450,99 +450,183 @@ export const galleryData = [
   "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-31.webp?alt=media&token=9a029b17-f6e7-49f3-a833-1e838ff0518c",
   "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-28.webp?alt=media&token=3e1aa323-b9ed-42e4-a4cf-178029ba20a8",
   "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/gallery-image-10.webp?alt=media&token=211db582-45c0-4d03-b869-10a91e8f9488",
-
 ];
-export const titleVideo = "Our Video Collection"
+export const titleVideo = "Our Video Collection";
 export const videoData = [
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-6.webp?alt=media&token=1e9e0e03-5d68-424b-b60a-ad4dd4c1c5a2",
     title: "Under the Starry Sky",
-    videoSrc: "https://www.youtube.com/watch?v=xO_x0DAhUT4&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=xO_x0DAhUT4&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-7.webp?alt=media&token=c9825c1d-ccfb-4230-ae39-9fc61e565fdf",
     title: "I've Waited So Long",
-    videoSrc: "https://www.youtube.com/watch?v=ngvt3OHx7zQ&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=ngvt3OHx7zQ&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-8.webp?alt=media&token=f4286c03-fb88-4e8c-abd8-3329a5061291",
     title: "Whisper in the Night",
-    videoSrc: "https://www.youtube.com/watch?v=jOe7JtsTLiM&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=jOe7JtsTLiM&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-9.webp?alt=media&token=b9148715-2207-46eb-b7de-301d392b359a",
     title: "Worth More?",
-    videoSrc: "https://www.youtube.com/watch?v=q9X9g2t67PM&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=q9X9g2t67PM&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-16.webp?alt=media&token=325217f9-2c3d-402d-b143-fc2822d0f7dc",
     title: "Nostalgic Melody",
-    videoSrc: "https://www.youtube.com/watch?v=nS9dImtaqLk&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=nS9dImtaqLk&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-17.webp?alt=media&token=fc6311de-c731-48c4-b93c-092b3efec2bc",
     title: "Love's Arrow",
-    videoSrc: "https://www.youtube.com/watch?v=Tcinagiy0hM&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=Tcinagiy0hM&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-18.webp?alt=media&token=ae4ca047-d4e8-40aa-aa28-3c713e3c583c",
     title: "Wind in My Hair",
-    videoSrc: "https://www.youtube.com/watch?v=kI4usARVdaU&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=kI4usARVdaU&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-2.webp?alt=media&token=c9d0650c-93c7-4861-8730-97cd3df88961",
     title: "Magical Moments",
-    videoSrc: "https://www.youtube.com/watch?v=iPyg-QknNeY&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=iPyg-QknNeY&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-3.webp?alt=media&token=96e83c07-22f7-4d61-a970-f2222d4c3146",
     title: "Secrets of the Heart",
-    videoSrc: "https://www.youtube.com/watch?v=rpPiFMcjF6M&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=rpPiFMcjF6M&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-4.webp?alt=media&token=1bfee79f-6611-49fd-a9ec-ce4ba6c96774",
     title: "Somewhere...",
-    videoSrc: "https://www.youtube.com/watch?v=VtMCHahEpSg&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=VtMCHahEpSg&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-5.webp?alt=media&token=8c681733-69b4-48bb-a63c-12a4df268dc5",
     title: "Clouds of Dreams",
-    videoSrc: "https://www.youtube.com/watch?v=FsnluXPC6s0&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=FsnluXPC6s0&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-1.webp?alt=media&token=ffe1e926-5425-411e-bcdd-97dc81ffb1c6",
     title: "Midst of the Storm",
-    videoSrc: "https://www.youtube.com/watch?v=dqC5x7cwwl0&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=dqC5x7cwwl0&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-10.webp?alt=media&token=7dbc23bd-bac6-4ab5-8dfc-326ae9c7f2c9",
     title: "Taste of Freedom",
-    videoSrc: "https://www.youtube.com/watch?v=_f7UMIEaf9A&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=_f7UMIEaf9A&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-11.webp?alt=media&token=3cd6094f-7e86-45e6-9d4f-96a9d3c7e813",
     title: "Light in the Darkness",
-    videoSrc: "https://www.youtube.com/watch?v=FguBcUk9XP4&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=FguBcUk9XP4&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-12.webp?alt=media&token=f2bbb7cb-3416-4f2c-b92e-fdd32c3009dc",
     title: "A Stroll in the Rain",
-    videoSrc: "https://www.youtube.com/watch?v=F5onIgMSyVg&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=F5onIgMSyVg&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-13.webp?alt=media&token=e6c459a2-5acd-4562-af28-b0f3c1ccd04e",
     title: "Searching for Meaning",
-    videoSrc: "https://www.youtube.com/watch?v=iPyg-QknNeY&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=iPyg-QknNeY&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-14.webp?alt=media&token=a4b94e3c-5c78-47c7-b9bb-a1dec65dbdc2",
     title: "Flame of Love",
-    videoSrc: "https://www.youtube.com/watch?v=_OLrjAWzUR0&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=_OLrjAWzUR0&ab_channel=NoCopyrightSounds",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/video-thumbnail-15.webp?alt=media&token=4c359adf-863e-48a4-9ae1-9abfdc761e41",
     title: "Footprints in the Sand",
-    videoSrc: "https://www.youtube.com/watch?v=l0NMbZHqMDk&ab_channel=NoCopyrightSounds",
+    videoSrc:
+      "https://www.youtube.com/watch?v=l0NMbZHqMDk&ab_channel=NoCopyrightSounds",
   },
 ];
 
+// About Us
+
+export const aboutUsData = [
+  {
+    name:"William",
+    surname:"Wilson",
+    desc:" I make the guitar sing with soulful melodies and fiery solos. I stumbled upon this band during a jam session at a local pub, and my love for bluesy licks adds a touch of nostalgia to our sound. Besides my passion for playing guitar, I'm a dedicated surfer, catching waves whenever I can. What sets me apart is my signature vintage hat that I wear on stage, giving our band a bit of old-school cool.",
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/william-wilson.jpg?alt=media&token=aa252c30-6ffe-400e-ae3b-19c36b6d9bb4&_gl=1*585ej*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM1NDcuNjAuMC4w",
+    alt: "William Wilson",
+  },
+  {
+    name:"Samuela",
+    surname:"Harris",
+    desc:"My voice is pure magic, soaring to ethereal heights and grounding us with soulful depth. I joined the band after winning a karaoke competition, and I bring a touch of diva elegance to our stage presence.Singing is my soul, but I also love volunteering at animal shelters. My unique trait is my collection of vintage microphones that I use during our performances, each with its own story and sound.",
+    url: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/samuel-harris.jpg?alt=media&token=091345dc-75ee-4349-b2e4-2302f269d6dd&_gl=1*1rxrmr9*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM1NjAuNDcuMC4w",
+    alt: "Samuela Harris",
+  },
+  {
+    name:"Olivia",
+    surname:"Smith",
+    desc:"My drumming is the heartbeat of our music, keeping us in sync with my infectious groove. I answered an online ad to join the band, and my blend of metal and funk influences adds a unique edge to our beats. When I'm not drumming, you'll find me crafting custom drumsticks for fellow drummers. What makes me stand out is my ever-changing drum kit, with a rotating selection of exotic percussion instruments integrated into it.",
+    url:"https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/olivia-smith.jpg?alt=media&token=0c631106-cfa7-4b11-afa6-fea4b492623a&_gl=1*ujx7hz*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM1NjUuNDIuMC4w",
+    alt:"Olivia Smith",
+  },
+  {
+    name:"Michael",
+    surname:"Taylor",
+    desc:"My funky basslines make it impossible not to dance, and my slap technique is second to none. I found my way to the band after a chance encounter at a local record store, and my love for 70s funk is our secret weapon. Apart from singing, I'm a foodie who loves exploring exotic cuisines. I stand out with my ever-changing collection of stage outfits, each one inspired by a different culture from around the world.",
+    url:"https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/michael-taylor.jpg?alt=media&token=cac73b75-31d5-4309-a3aa-2b6a932e7d8d&_gl=1*n4aj9y*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM1NjkuMzguMC4w",
+    alt:"Michael Taylor",
+  },
+  {
+    name:"James",
+    surname:"Davis",
+    desc:"I craft soulful melodies and fiery solos on my electric guitar, infusing our music with nostalgia and energy. My vintage hat adds a touch of old-school cool to our stage presence. Synths are my playground, and I'm also a sci-fi book enthusiast. What distinguishes me is my futuristic LED glasses that I wear during performances, creating a visual spectacle to match our music.",
+    url:"https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/james-davis.jpg?alt=media&token=a690924d-3d12-472c-ad91-371b47135a5a&_gl=1*ugfv96*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM1NzMuMzQuMC4w",
+    alt:"James Davis",
+  },
+  {
+    name:"Daniel",
+    surname:"Evans",
+    desc:" My synth mastery creates an otherworldly atmosphere in our music. I was introduced to the band by a mutual friend, and my obsession with vintage analog synths transports our sound to the future while paying homage to the past. My love for percussion extends to my hobby of building custom drums. What makes me unique is my collection of rare and handcrafted percussion instruments from various corners of the globe.",
+    url:"https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/daniel-evans.jpg?alt=media&token=0a07b420-f2b4-4d5b-b4c5-d89b3852a965&_gl=1*18zmwg7*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM1ODQuMjMuMC4w",
+    alt:"Daniel Evans",
+  },
+  {
+    name:"Christopher",
+    surname:"White",
+    desc:"I bring global rhythms to our music with an array of exotic percussion instruments. I was spotted busking on the streets, and my multicultural influences infuse our songs with a unique world music vibe. My musical versatility is matched by my love for nature, often going on hiking adventures. I'm instantly recognizable by my flowing bohemian dresses and flower crowns that I wear on stage.",
+    url:"https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/christopher-white.jpg?alt=media&token=c87fec07-3432-47cc-8f68-079ab115aa34&_gl=1*pz8r4u*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM1ODYuMjEuMC4w",
+    alt:"Christopher White",
+  },
+  {
+    name:"Benjamin",
+    surname:"Brown",
+    desc:"My versatility is our secret weapon. I auditioned for the band with my mesmerizing violin skills and then surprised everyone with my ability to play multiple instruments. My classical background adds a touch of elegance to our music. Poetry is my other passion, and I perform spoken word in my free time. What sets me apart is my enigmatic masks, each one handcrafted and representing a different emotion or theme.",
+    url:"https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/benjamin-brown.jpg?alt=media&token=ee7bac23-cc9d-400d-b9ce-7011d444578a&_gl=1*1u540ws*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM1ODguMTkuMC4w",
+    alt:"Benjamin Brown",
+  },
+  {
+    name:"Emily",
+    surname:"Johnson",
+    desc:"My experimental guitar effects and ambient textures create a sonic dreamscape. I joined the band after meeting the others at a music festival, and my penchant for pushing musical boundaries adds a touch of avant-garde to our sound. My love for experimentation extends to my fascination with astronomy. What makes me unique is my collection of custom-made guitar pedals, each with its own quirky design and sound modulation.",
+    url:"https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/emily-johnson.jpg?alt=media&token=c2189a24-fdf1-4041-acd3-6b00b14ae951&_gl=1*tyekxl*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5NjA5MzM5OC4xMS4xLjE2OTYwOTM4NzYuNTkuMC4w",
+    alt:"Emily Johnson",
+  },
+];

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { HeroVideo, TeamMembers, ScrollToTop } from "../components";
 
 const AboutUs = () => {
   return (
-    <div>AboutUs</div>
-  )
-}
+    <>
+      <HeroVideo />
+      <TeamMembers/>
+      <ScrollToTop />
+    </>
+  );
+};
 
-export default AboutUs
+export default AboutUs;
