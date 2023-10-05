@@ -9,7 +9,7 @@ const TourSection = () => {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(${ticketsBg})`,
     backgroundSize: "cover",
   };
-  
+
   return (
     <section
       className="flex-wrap items-center justify-center gap-6 px-5 py-5 mx-auto text-white bg-white containerflex lg:px-20 lg:justify-between"
@@ -22,7 +22,7 @@ const TourSection = () => {
         <div className="w-48 h-1 bg-redBarClr"></div>
       </div>
       <div className="flex flex-col items-center justify-center w-full gap-6">
-        {tickets.map((ticket, index) => (
+        {tickets.slice(0, 4).map((ticket, index) => (
           <Ticket
             key={index}
             ticketDate={ticket.date}
@@ -34,7 +34,8 @@ const TourSection = () => {
         ))}
       </div>
       <div className="flex justify-center w-full pt-6 tracking-widest uppercase lg:pt-8">
-        <Button>More Tickets</Button>
+        <Button to="tour">More Tickets</Button>
+       
       </div>
     </section>
   );

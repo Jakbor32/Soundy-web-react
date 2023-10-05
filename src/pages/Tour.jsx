@@ -1,8 +1,11 @@
 import React from 'react'
+import { Timeline } from '../components'
 
 const Tour = () => {
   return (
-    <div>Tour</div>
+    <>
+    <Timeline />
+    </>
   )
 }
 
