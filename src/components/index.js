@@ -15,7 +15,7 @@ import ScrollToTop from "./common/ScrollToTop";
 import HeroVideo from "./aboutus/HeroVideo";
 import TeamMemberCard from "./aboutus/TeamMemberCard";
 import TeamMembers from "./aboutus/TeamMembers";
-import Timeline from "./common/TimeLine";
+import TimeLine from "./common/TimeLine";
 
 
 export {
@@ -36,5 +36,5 @@ export {
   HeroVideo,
   TeamMemberCard,
   TeamMembers,
-  Timeline,
+  TimeLine,
 };
