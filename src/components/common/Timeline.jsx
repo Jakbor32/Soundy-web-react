@@ -6,11 +6,11 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-const TimeLine = () => {
+const Timeline = () => {
   return (
     <div className="container mx-auto mt-32 x-0 lg:px-20">
       <VerticalTimeline>
-        {tickets.map((ticket, index) => (
+        {tickets.map((ticket) => (
           <VerticalTimelineElement
             contentStyle={{
               background: "#0D0B0B",
@@ -60,4 +60,4 @@ const TimeLine = () => {
   );
 };
 
-export default TimeLine;
+export default Timeline;
