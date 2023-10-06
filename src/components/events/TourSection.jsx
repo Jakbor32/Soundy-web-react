@@ -34,8 +34,7 @@ const TourSection = () => {
         ))}
       </div>
       <div className="flex justify-center w-full pt-6 tracking-widest uppercase lg:pt-8">
-        <Button to="tour">More Tickets</Button>
-       
+       <a className="text-xl text-white opacity-70 bg-transparent border-2 border-white py-3 px-6 ease-out duration-300 hover:opacity-100" href="tour">more tickets</a>
       </div>
     </section>
   );
