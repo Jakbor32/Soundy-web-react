@@ -709,3 +709,22 @@ export const aboutUsData = [
     alt: "Emily Johnson",
   },
 ];
+
+// Tour
+
+export const cities = [
+  "Warsaw",
+  "New York",
+  "Paris",
+  "London",
+  "Los Angeles",
+  "Tokyo",
+  "Sydney",
+  "Berlin",
+  "Rio De Janeiro",
+  "Toronto",
+  "Barcelona",
+  "Mumbai",
+  "Cape Town",
+  "Dublin",
+];

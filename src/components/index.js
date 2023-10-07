@@ -16,6 +16,7 @@ import HeroVideo from "./aboutus/HeroVideo";
 import TeamMemberCard from "./aboutus/TeamMemberCard";
 import TeamMembers from "./aboutus/TeamMembers";
 import Timeline from "./common/Timeline";
+import ConcertView from "./tour/ConcertView";
 
 
 export {
@@ -37,4 +38,5 @@ export {
   TeamMemberCard,
   TeamMembers,
   Timeline,
+  ConcertView,
 };

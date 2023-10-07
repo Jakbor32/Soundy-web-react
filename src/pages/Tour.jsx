@@ -1,9 +1,11 @@
 import React from 'react'
-import { Timeline } from '../components'
+import { ConcertView, Timeline,DividerLine } from '../components'
 
 const Tour = () => {
   return (
     <>
+    <ConcertView />
+    <DividerLine />
     <Timeline />
     </>
   )

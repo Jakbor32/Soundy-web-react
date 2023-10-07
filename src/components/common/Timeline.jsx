@@ -8,7 +8,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 const Timeline = () => {
   return (
-    <div className="container mx-auto mt-32 x-0 lg:px-20">
+    <div className="container mx-auto  lg:px-20">
       <VerticalTimeline lineColor={"#5B0000"}>
         {tickets.map((ticket) => (
           <VerticalTimelineElement
