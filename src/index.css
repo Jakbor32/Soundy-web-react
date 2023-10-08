@@ -4,23 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /*  Masonry */
 .my-masonry-grid {
   display: flex;
-  margin-left: -30px; 
+  margin-left: -30px;
   width: auto;
-  
 }
 .my-masonry-grid_column {
   padding-left: 30px;
   background-clip: padding-box;
-  
 }
 
-.my-masonry-grid_column > div { 
+.my-masonry-grid_column > div {
   margin-bottom: 30px;
-  
 }
 
 /* Lazy load - blur effect */
@@ -32,21 +28,17 @@
 
 .lazy-load-image-background.blur.lazy-load-image-loaded {
   filter: blur(0);
-  transition: filter .5s;
-
+  transition: filter 0.5s;
 }
 
 .lazy-load-image-background.blur > img {
   opacity: 0;
-
 }
 
 .lazy-load-image-background.blur.lazy-load-image-loaded > img {
   opacity: 1;
-  transition: opacity .5s;
-
+  transition: opacity 0.5s;
 }
-
 
 html,
 body {
@@ -72,9 +64,7 @@ body {
   animation: slideOutLeft 0.25s ease forwards;
 }
 
-
-
-/* Animation slide in/out left to right */  
+/* Animation slide in/out left to right */
 @keyframes slideInRight {
   from {
     transform: translateX(-100%);
@@ -94,7 +84,7 @@ body {
     transform: translateX(-100%);
   }
 }
-/* Animation slide in/out right to left */  
+/* Animation slide in/out right to left */
 @keyframes slideInLeft {
   from {
     transform: translateX(100%);
@@ -142,7 +132,7 @@ body {
 .pag-pagination .is-active {
   background-color: #ffffffdb;
   opacity: 1;
-  animation: grow .2s ease-in;
+  animation: grow 0.2s ease-in;
 }
 .pag-page {
   background-color: #ffffffdb;
@@ -173,4 +163,15 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: #fff;
   background-color: transparent;
   transition: background-color 999s ease-in-out 0s;
+}
+
+/* Vertical Timeline */
+.vertical-timeline::before {
+  left: 27.5px;
+}
+.vertical-timeline-element-content {
+  margin-left: 75px;
+}
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  padding: 0;
 }
