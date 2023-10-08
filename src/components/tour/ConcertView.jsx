@@ -13,9 +13,9 @@ const ConcertView = () => {
   }, []);
 
   return (
-    <div className="h-screen relative md:-mb-60 -mb-64 sm:-mb-0">
+    <div className="h-screen relative  lg:-mb-60">
       <video
-        className="w-full h-3/4 absolute inset-y-0 object-cover"
+        className="w-full sm:h-3/4 absolute inset-y-0 object-cover h-full"
         autoPlay
         loop
         muted
@@ -27,7 +27,7 @@ const ConcertView = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute inset-0 bg-black opacity-70 h-3/4"></div>
+      <div className="absolute inset-0 bg-black opacity-70 sm:h-3/4  h-full"></div>
       <div className="h-3/4 absolute inset-0 flex text-gray-400">
         <div className="h-3/4 container relative flex flex-col items-center gap-8 px-5 mx-auto my-0 text-center md:gap-3 md:pt-10 lg:items-start lg:px-20 lg:pt-16 lg:text-left">
           <h1 className="mb-4 max-w-[30rem] text-[2.25rem] font-bold uppercase leading-[3rem] lg:max-w-[45rem] lg:text-5xl lg:leading-[4.5rem] mt-24">
