@@ -58,10 +58,17 @@ export default {
           borderColor: "white",
         },
       },
+      ping: {
+         "40%": {
+          transform: "scale(1)",
+          opacity: "0"
+        }
+      }
     },
     animation: {
       "slide-down": "slideDown .5s ease forwards",
       typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
+      ping: "ping 2s ease-in infinite"
     },
   },
   plugins: [],

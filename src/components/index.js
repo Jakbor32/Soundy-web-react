@@ -17,6 +17,15 @@ import TeamMemberCard from "./aboutus/TeamMemberCard";
 import TeamMembers from "./aboutus/TeamMembers";
 import Timeline from "./common/Timeline";
 import ConcertView from "./tour/ConcertView";
+import SearchBar from "./store/SearchBar";
+import CategorySelector from "./store/CategorySelector";
+import NewCollection from "./store/NewCollection";
+import StoreDescription from "./store/StoreDescription";
+import ProductSorting from "./store/ProductSorting";
+import SpecialOffers from "./store/SpecialOffers";
+import Benefits from "./store/Benefits";
+import Items from "./store/Items";
+
 
 
 export {
@@ -39,4 +48,12 @@ export {
   TeamMembers,
   Timeline,
   ConcertView,
+  SearchBar,
+  CategorySelector,
+  NewCollection,
+  StoreDescription,
+  ProductSorting,
+  SpecialOffers,
+  Benefits,
+  Items
 };
