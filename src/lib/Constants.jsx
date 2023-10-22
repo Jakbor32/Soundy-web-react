@@ -728,3 +728,29 @@ export const cities = [
   "Cape Town",
   "Dublin",
 ];
+
+// Store
+
+export const newCollection = [
+  {
+    id: 0,
+    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/purple-guitar.jpg?alt=media&token=3130b357-e373-4a90-941e-4b1d5a94b1cc&_gl=1*12eykii*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5ODAxMDI4My4xNS4xLjE2OTgwMTAzMTcuMjYuMC4w",
+    imageAlt: "Purple guitar",
+  },
+  {
+    id: 1,
+    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/blue-guitar.jpg?alt=media&token=d0605cc0-f192-4708-a838-128a606c075f&_gl=1*1gele4m*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5ODAxMDI4My4xNS4xLjE2OTgwMTAzMDkuMzQuMC4w",
+    imageAlt: "Blue guitar",
+  },
+  {
+    id: 2,
+    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/wooden-guitar.jpg?alt=media&token=31d58413-0003-446d-981c-40df3a9bd8ff&_gl=1*76kt3e*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5ODAxMDI4My4xNS4xLjE2OTgwMTAzMDIuNDEuMC4w",
+    imageAlt: "Wooden guitar",
+  },
+  {
+    id: 3,
+    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/pink-guitar.jpg?alt=media&token=12232acf-9abf-49a8-847b-99390dd8822d&_gl=1*1493n9n*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5ODAxMDI4My4xNS4xLjE2OTgwMTAyOTUuNDguMC4w",
+    imageAlt: "Pink guitar",
+  },
+
+];

@@ -1,9 +1,24 @@
-import React from 'react'
+import React from "react";
+import { Benefits, NewCollection, SearchBar, Items, ProductSorting, DividerLine, SpecialOffers, CategorySelector, ScrollToTop } from "../components";
+
 
 const Store = () => {
   return (
-    <div>Store</div>
-  )
-}
+    <>
+      <NewCollection />
+      <SpecialOffers />
+      <DividerLine />
+      <SearchBar />
+      <ProductSorting />
+      <CategorySelector />
+      <DividerLine />
+      <Items />
+      <DividerLine />
+      <Benefits />
+      <ScrollToTop/>
 
-export default Store
+    </>
+  );
+};
+
+export default Store;
