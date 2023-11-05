@@ -11,17 +11,17 @@ const NewCollection = () => {
             <div className="font-epilogue text-white lg:w-screen mt-10 w-full">
               <div className="flex items-center">
                 <img
-                  className="lg:min-w-max w-[40rem]"
+                  className="lg:min-w-max w-[15rem]"
                   src={newItem.image}
                   alt={newItem.imageAlt}
                 />
 
                 <div className="flex gap-3 flex-col  w-full lg:w-[30rem] -ml-20 lg:ml-0">
-                  <div className="font-gotu lg:text-6xl  text-3xl italic">
+                  <div className="font-gotu lg:text-6xl  text-center text-3xl italic">
                     {newItem.price}{" "}
                     <span className="lg:text-7xl text-4xl">$</span>
                   </div>
-                  <div className="lg:text-5xl text-xl font-oregano text-center">
+                  <div className="lg:text-5xl text-xl mr-5 lg:mr-0 font-oregano text-center">
                     {newItem.desc}
                   </div>
                 </div>

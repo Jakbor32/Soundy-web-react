@@ -744,6 +744,58 @@ export const newCollection = [
     image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Promotion-guitar-purple-soundy.png?alt=media&token=0d6f8405-de9b-40de-971c-da68a2313db5&_gl=1*sp9sgu*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5OTE4MjY2MC4xNy4xLjE2OTkxODMzMTAuNTQuMC4w",
     imageAlt: "Purlple guitar",
     price:"450",
-    desc: "Fender Stratocaster Retro Guitar"
+    desc: "Fender Strato Retro Guitar"
   },
 ];
+
+export const specialOffers = [
+  {
+    src: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/557/325x325/never-have-i-felt-this-vip-1698364854-BAmeUj1p7r.jpg",
+    alt: "Track: Koven - Never Have I Felt This [NCS Release]",
+    songName: "Koven - Never Have I Felt This [NCS Release]",
+    price: "14.99$",
+    desc: "Music provided by NoCopyrightSounds.",
+    linkNCS: "http://ncs.io/NeverHaveIFeltThisYO"
+  },
+  {
+    src: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/558/325x325/devil-1698714047-bAco2suBUA.jpg",
+    alt: "Track: Diamond Eyes - Devil [NCS Release]",
+    songName: "Diamond Eyes - Devil [NCS Release]",
+    price: "13.99$",
+    desc: "Music provided by NoCopyrightSounds.",
+    linkNCS: "http://ncs.io/de-devil"
+  },
+  {
+    src: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/555/325x325/everything-i-got-1698278450-8qv2xIlCvp.jpg",
+    alt: "Track: Shiah Maisel & Clarx - Everything I Got [NCS Release]",
+    songName: "Shiah Maisel & Clarx - Everything I Got [NCS Release]",
+    price: "17.99$",
+    desc: "Music provided by NoCopyrightSounds.",
+    linkNCS: "http://ncs.io/everythingigot"
+  },
+  {
+    src: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/553/325x325/pick-up-the-pieces-ft-cesar-santiago-1697760059-3qPzFFMjZV.jpg",
+    alt: "Track: MANIA - Pick Up The Pieces (ft. Cesar Santalo) [NCS Release]",
+    songName: "MANIA - Pick Up The Pieces (ft. Cesar Santalo) [NCS Release]",
+    price: "11.99$",
+    desc: "Music provided by NoCopyrightSounds.",
+    linkNCS: "http://ncs.io/PUTP"
+  },
+  {
+    src: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/552/325x325/royalty-don-diablo-remix-1697760047-BZa0krcT00.jpg",
+    alt: "Track: Egzod & Maestro Chives - Royalty (Don Diablo Remix) [NCS Release]",
+    songName: "Egzod & Maestro Chives - Royalty (Don Diablo Remix) [NCS Release]",
+    price: "16.99$",
+    desc: "Music provided by NoCopyrightSounds.",
+    linkNCS: "http://ncs.io/dd-royalty"
+  },
+  {
+    src: "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/538/325x325/1696583182_QUThTOGvco_Final.jpg",
+    alt: "Track: AC13 - Waves Ft. Comma Dee [NCS Release]",
+    songName: "AC13 - Waves Ft. Comma Dee [NCS Release]",
+    price: "10.99$",
+    desc: "Music provided by NoCopyrightSounds.",
+    linkNCS: "http://ncs.io/waves"
+  },
+];
+
