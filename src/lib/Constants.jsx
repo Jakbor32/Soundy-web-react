@@ -734,23 +734,16 @@ export const cities = [
 export const newCollection = [
   {
     id: 0,
-    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/purple-guitar.jpg?alt=media&token=3130b357-e373-4a90-941e-4b1d5a94b1cc&_gl=1*12eykii*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5ODAxMDI4My4xNS4xLjE2OTgwMTAzMTcuMjYuMC4w",
-    imageAlt: "Purple guitar",
+    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Promotion-guitar-red-soundy.png?alt=media&token=734ae0fa-fedf-4ae3-80ae-e203355f42b2&_gl=1*18eq6qd*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5OTE4MjY2MC4xNy4xLjE2OTkxODI2ODkuMzEuMC4w",
+    imageAlt: "Red guitar",
+    price:"300",
+    desc: "Taylor 814ce Acoustic Guitar"
   },
   {
     id: 1,
-    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/blue-guitar.jpg?alt=media&token=d0605cc0-f192-4708-a838-128a606c075f&_gl=1*1gele4m*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5ODAxMDI4My4xNS4xLjE2OTgwMTAzMDkuMzQuMC4w",
-    imageAlt: "Blue guitar",
+    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Promotion-guitar-purple-soundy.png?alt=media&token=0d6f8405-de9b-40de-971c-da68a2313db5&_gl=1*sp9sgu*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5OTE4MjY2MC4xNy4xLjE2OTkxODMzMTAuNTQuMC4w",
+    imageAlt: "Purlple guitar",
+    price:"450",
+    desc: "Fender Stratocaster Retro Guitar"
   },
-  {
-    id: 2,
-    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/wooden-guitar.jpg?alt=media&token=31d58413-0003-446d-981c-40df3a9bd8ff&_gl=1*76kt3e*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5ODAxMDI4My4xNS4xLjE2OTgwMTAzMDIuNDEuMC4w",
-    imageAlt: "Wooden guitar",
-  },
-  {
-    id: 3,
-    image: "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/pink-guitar.jpg?alt=media&token=12232acf-9abf-49a8-847b-99390dd8822d&_gl=1*1493n9n*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5ODAxMDI4My4xNS4xLjE2OTgwMTAyOTUuNDguMC4w",
-    imageAlt: "Pink guitar",
-  },
-
 ];
