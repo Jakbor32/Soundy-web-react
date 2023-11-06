@@ -58,8 +58,8 @@ const CategorySelector = () => {
       } ${
         isMobile
           ? expanded
-            ? "h-[90vh] w-[80%]  overflow-auto mx-auto"
-            : "h-[3.5rem] overflow-hidden w-[80%] mx-auto"
+            ? "h-1/1 w-[80vw]  mx-auto"
+            : "h-[3.5rem] overflow-hidden w-[80vw] mx-auto"
           : "h-[90vh]"
       } overflow-auto`}
     >
