@@ -37,6 +37,7 @@ const ProductSorting = () => {
       borderRadius: "6px",
       width: window.innerWidth < 1280 ? "100%" : "20rem",
       padding: ".5rem 2rem",
+      
     }),
     menuList: (styles) => ({
       ...styles,
@@ -52,6 +53,10 @@ const ProductSorting = () => {
         : undefined,
       zIndex: 1,
       color: "#FFF",
+    }),
+    input: (provided) => ({
+      ...provided,
+      color: '#FFF', 
     }),
 
   };

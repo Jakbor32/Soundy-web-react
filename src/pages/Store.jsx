@@ -1,5 +1,5 @@
 import React from "react";
-import { Benefits, NewCollection, SearchBar, Items, ProductSorting, DividerLine, SpecialOffers, CategorySelector, ScrollToTop } from "../components";
+import { Benefits, NewCollection, SearchBar, Items, ProductSorting, DividerLine, SpecialOffers, ScrollToTop } from "../components";
 
 
 const Store = () => {
@@ -7,11 +7,8 @@ const Store = () => {
     <>
       <NewCollection />
       <SpecialOffers />
-      <DividerLine />
       <SearchBar />
       <ProductSorting />
-      <CategorySelector />
-      <DividerLine />
       <Items />
       <DividerLine />
       <Benefits />
