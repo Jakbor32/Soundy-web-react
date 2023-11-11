@@ -41,6 +41,14 @@ export default {
           transform: "translateY(0)",
         },
       },
+      slideUp: {
+        "0%": {
+          transform: "translateY(0)",
+        },
+        "100%": {
+          transform: "translateY(-100%)",
+        },
+      },
       typing: {
         "0%": {
           width: "0%",
@@ -67,6 +75,7 @@ export default {
     },
     animation: {
       "slide-down": "slideDown .5s ease forwards",
+      "slide-up": "slideUp .5s ease forwards",
       typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
       ping: "ping 2s ease-in infinite"
     },

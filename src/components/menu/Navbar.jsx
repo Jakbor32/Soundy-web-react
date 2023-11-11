@@ -8,6 +8,7 @@ import LogoutButton from "../auth/Logout";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [open, setOpen] = useState(false);
   const [openCart, setOpenCart] = useState(false);
   const { cartItems } = useCartContext();
@@ -22,11 +23,19 @@ const Navbar = () => {
   // Navbar scroll detection
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight) {
-        setScrolled(true);
-      } else {
+      const currentScrollPos = window.scrollY;
+
+      if (currentScrollPos > prevScrollPos) {
         setScrolled(false);
+      } else {
+        setScrolled(true);
       }
+
+     if(prevScrollPos < 100){
+      setScrolled(false)
+     }
+
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,7 +43,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPos, setScrolled]);
 
   // Body overflow control
   useEffect(() => {
@@ -49,9 +58,11 @@ const Navbar = () => {
     <nav
       className={`${
         scrolled
-          ? "fixed top-0 z-10  w-full animate-slide-down  border-b border-b-gray-700 bg-black bg-opacity-40 backdrop-blur-sm backdrop-filter"
-          : "absolute top-0 z-10 w-full"
-      } px-4 py-1.5 text-white md:px-6`}
+        ? "fixed top-0 z-10 w-full animate-slide-down  bg-black bg-opacity-40 backdrop-blur-sm backdrop-filter"
+        : prevScrollPos < 1
+        ? "absolute animate-slide-down w-full z-10"
+        : "fixed top-0 z-10 w-full animate-slide-up  bg-black bg-opacity-40 backdrop-blur-sm backdrop-filter"
+    } px-4 py-1.5 text-white md:px-6`}
     >
       <div className="mx-auto flex max-w-8xl flex-wrap items-center justify-between px-4 py-1.5">
         <div className="flex flex-row gap-3">
