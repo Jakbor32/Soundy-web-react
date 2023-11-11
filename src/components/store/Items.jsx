@@ -113,12 +113,12 @@ const Items = () => {
           isCategorySelectorHidden ? "flex-col" : "flex-row"
         }`}
       >
-        <div className="xl:w-1/4 md:w-[25rem] sm:w-[20rem]">
+        <div className="xl:w-1/4 md:w-[25rem] sm:w-[20rem] mx-auto px-10 sm:px-0">
           <CategorySelector />
         </div>
         <div
           className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4  ${
-            isCategorySelectorHidden ? "w-full p-2" : "w-3/4"
+            isCategorySelectorHidden ? "w-full p-4" : "w-3/4"
           }`}
         >
           {currentProducts.map((product) => (

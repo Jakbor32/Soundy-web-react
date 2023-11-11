@@ -15,7 +15,7 @@ const StorePagination = ({
   }
 
   return (
-    <div className="flex justify-center space-x-4 mt-10">
+    <div className="flex justify-center  mt-10 flex-wrap gap-3">
       {currentPage > 1 ? (
         <button
           className="px-4 py-2 rounded-md bg-gray-300"
