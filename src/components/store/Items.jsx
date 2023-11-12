@@ -13,7 +13,7 @@ const Items = () => {
 
   const handleSelectCategory = (categoryName) => {
     setSelectedCategory(categoryName);
-    console.log(selectedCategory);
+    setCurrentPage(1);
   };
   useEffect(() => {
     const handleResize = () => {
