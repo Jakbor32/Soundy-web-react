@@ -2,30 +2,29 @@ import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { AiFillCaretDown } from "react-icons/ai";
 
-const CategorySelector = () => {
+const CategorySelector = ({onSelectCategory}) => {
   const [ref, inView] = useInView({});
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [expanded, setExpanded] = useState(false);
 
   const categories = [
-    "Music-themed T-shirts",
-    "Guitars and guitar accessories",
+    "T-shirts",
+    "Guitars",
     "CDs and vinyl records",
-    "Hoodies and music apparel",
     "Souvenirs related to favorite bands and artists",
     "Drum kits and percussion accessories",
-    "Keyboards and synthesizers",
     "Music software",
-    "Sound equipment",
     "Studio equipment",
   ];
 
-  const handleCategoryClick = (index) => {
-    if (selectedCategory === index) {
+  const handleCategoryClick = (categoryName) => {
+    if (selectedCategory === categoryName) {
       setSelectedCategory(null);
+      onSelectCategory("");
     } else {
-      setSelectedCategory(index);
+      setSelectedCategory(categoryName);
+      onSelectCategory(categoryName);
       setTimeout(() => {
         setExpanded(!expanded);
       }, 200);
@@ -60,7 +59,7 @@ const CategorySelector = () => {
           ? expanded
             ? "h-1/1"
             : "h-[3.5rem] overflow-hidden"
-          : "h-[90vh]"
+          : "h-[90vh] xl:h-fit"
       } overflow-auto`}
     >
       <div
@@ -80,9 +79,9 @@ const CategorySelector = () => {
         {categories.map((category, index) => (
           <li
             key={index}
-            onClick={() => handleCategoryClick(index)}
+            onClick={() => handleCategoryClick(category)}
             className={`mb-4 p-4 rounded cursor-pointer hover:bg-stone-950 transform transition ${
-              selectedCategory === index
+              selectedCategory === category
                 ? "scale-90 bg-stone-950"
                 : "scale-100 bg-stone-900"
             }`}

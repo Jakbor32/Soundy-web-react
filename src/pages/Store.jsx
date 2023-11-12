@@ -8,7 +8,6 @@ const Store = () => {
       <NewCollection />
       <SpecialOffers />
       <SearchBar />
-      <ProductSorting />
       <Items />
       <DividerLine />
       <Benefits />

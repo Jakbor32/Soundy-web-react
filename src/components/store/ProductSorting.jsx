@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
-const ProductSorting = () => {
+const ProductSorting = ({ onFilterChange }) => {
+  const [selectedSortingOptions, setSelectedSortingOptions] = useState("");
+  const [selectedYearOptions, setSelectedYearOptions] = useState("");
+  const [selectedShippingOptions, setSelectedShippingOptions] = useState("");
   const sortingOptions = [
     { value: "recent", label: "Most Recent" },
     { value: "popular", label: "Most Popular" },
@@ -18,12 +21,20 @@ const ProductSorting = () => {
   }
 
   const shippingOptions = [
-    { value: "arcelLocker", label: "Parcel Locker" },
+    { value: "parcelLocker", label: "Parcel Locker" },
     { value: "courier", label: "Courier" },
     { value: "post", label: "Post" },
     { value: "express", label: "Express" },
     { value: "pickup", label: "Pickup" },
   ];
+
+  const handleFilterChange = () => {
+    onFilterChange({
+      sortingOptions: selectedSortingOptions,
+      yearOptions: selectedYearOptions,
+      shippingOptions: selectedShippingOptions,
+    });
+  };
 
   const colourStyles = {
     singleValue: (provided) => ({
@@ -37,7 +48,6 @@ const ProductSorting = () => {
       borderRadius: "6px",
       width: window.innerWidth < 1280 ? "100%" : "20rem",
       padding: ".5rem 2rem",
-      
     }),
     menuList: (styles) => ({
       ...styles,
@@ -56,10 +66,14 @@ const ProductSorting = () => {
     }),
     input: (provided) => ({
       ...provided,
-      color: '#FFF', 
+      color: "#FFF",
     }),
-
   };
+
+  useEffect(() => {
+    handleFilterChange();
+  }, [selectedSortingOptions, selectedYearOptions, selectedShippingOptions]);
+
   return (
     <div className="text-gray-600 container px-2 sm:px-20 py-10 mx-auto md:block">
       <div className="flex  justify-between flex-col xl:flex-row gap-2">
@@ -68,18 +82,27 @@ const ProductSorting = () => {
           options={sortingOptions}
           styles={colourStyles}
           isMulti
+          onChange={(selectedOptions) =>
+            setSelectedSortingOptions(selectedOptions)
+          }
         />
         <Select
           placeholder="Select Year"
           options={yearOptions}
           styles={colourStyles}
           isMulti
+          onChange={(selectedOptions) =>
+            setSelectedYearOptions(selectedOptions)
+          }
         />
         <Select
           placeholder="Shipping Options"
           options={shippingOptions}
           styles={colourStyles}
           isMulti
+          onChange={(selectedOptions) =>
+            setSelectedShippingOptions(selectedOptions)
+          }
         />
       </div>
     </div>
