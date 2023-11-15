@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
-const ProductSorting = ({ onFilterChange }) => {
-  const [selectedSortingOptions, setSelectedSortingOptions] = useState("");
+const ProductSorting = ({ onFilterChange, onSortChange, onShippingChange }) => {
+  const [selectedSortingOption, setSelectedSortingOption] = useState(null);
   const [selectedYearOptions, setSelectedYearOptions] = useState("");
   const [selectedShippingOptions, setSelectedShippingOptions] = useState("");
   const sortingOptions = [
-    { value: "recent", label: "Most Recent" },
-    { value: "popular", label: "Most Popular" },
-    { value: "topRated", label: "Top Rated" },
     { value: "lowToHigh", label: "Price: Low to High" },
     { value: "highToLow", label: "Price: High to Low" },
   ];
@@ -30,10 +27,16 @@ const ProductSorting = ({ onFilterChange }) => {
 
   const handleFilterChange = () => {
     onFilterChange({
-      sortingOptions: selectedSortingOptions,
+      sortingOptions: selectedSortingOption,
       yearOptions: selectedYearOptions,
       shippingOptions: selectedShippingOptions,
     });
+  };
+
+  const handleSortChange = (selectedSortOption) => {
+    setSelectedSortingOption(selectedSortOption);
+    onSortChange(selectedSortOption);
+  
   };
 
   const colourStyles = {
@@ -72,18 +75,23 @@ const ProductSorting = ({ onFilterChange }) => {
 
   useEffect(() => {
     handleFilterChange();
-  }, [selectedSortingOptions, selectedYearOptions, selectedShippingOptions]);
+  }, [selectedSortingOption, selectedYearOptions, selectedShippingOptions]);
+
+  const dynamicSortingOptions = sortingOptions.filter(
+    (option) =>
+      !selectedSortingOption || option.value === selectedSortingOption.value
+  );
 
   return (
     <div className="text-gray-600 container px-2 sm:px-20 py-10 mx-auto md:block">
       <div className="flex  justify-between flex-col xl:flex-row gap-2">
         <Select
           placeholder="Sort by"
-          options={sortingOptions}
+          options={dynamicSortingOptions}
           styles={colourStyles}
           isMulti
           onChange={(selectedOptions) =>
-            setSelectedSortingOptions(selectedOptions)
+            handleSortChange(selectedOptions[0])
           }
         />
         <Select

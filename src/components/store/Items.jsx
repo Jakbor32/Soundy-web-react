@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import CategorySelector from "./CategorySelector";
 import StorePagination from "./StorePagination";
 import ProductSorting from "./ProductSorting";
@@ -7,7 +7,11 @@ import { products } from "../../lib/Constants";
 const Items = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [updatedProducts, setUpdatedProducts] = useState(products);
+  const [updatedProducts, setUpdatedProducts] = useState([]);
+  const [selectedYearOptions, setSelectedYearOptions] = useState(null);
+  const [selectedSortingOptions, setSelectedSortingOptions] = useState(null);
+  const [selectedShippingOptions, setSelectedShippingOptions] = useState(null);
+  const [filteredProductsCopy, setFilteredProductsCopy] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 16;
 
@@ -15,6 +19,17 @@ const Items = () => {
     setSelectedCategory(categoryName);
     setCurrentPage(1);
   };
+
+  const handleSortChange = (selectedSortOption) => {
+    setSelectedSortingOptions(selectedSortOption);
+    setCurrentPage(1);
+  };
+
+  const handleShippingChange = (selectedShippingOption) => {
+    setSelectedShippingOptions(selectedShippingOption);
+    setCurrentPage(1);
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -32,22 +47,54 @@ const Items = () => {
   const startIndex = (currentPage - 1) * productsPerPage;
   const endIndex = startIndex + productsPerPage;
 
-  const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
-      if (selectedCategory == null || selectedCategory === "") {
-        return true;
-      } else {
-        return product.category === selectedCategory;
+  useEffect(() => {
+    let filteredProductsCopy = [...products];
+
+    if (selectedCategory && selectedCategory !== "") {
+      filteredProductsCopy = filteredProductsCopy.filter(
+        (product) => product.category === selectedCategory
+      );
+    }
+
+    if (selectedYearOptions && selectedYearOptions.length > 0) {
+      filteredProductsCopy = filteredProductsCopy.filter((product) =>
+        selectedYearOptions.some(
+          (option) =>
+            option.value === product.production_year &&
+            (!selectedCategory || product.category === selectedCategory)
+        )
+      );
+    }
+
+    if (selectedShippingOptions && selectedShippingOptions.length > 0) {
+      filteredProductsCopy = filteredProductsCopy.filter((product) =>
+        selectedShippingOptions.some(
+          (option) =>
+            option.value === product.delivery_type &&
+            (!selectedCategory || product.category === selectedCategory)
+        )
+      );
+    }
+
+    if (selectedSortingOptions) {
+      if (selectedSortingOptions.value === "lowToHigh") {
+        filteredProductsCopy.sort((a, b) => a.price - b.price);
+      } else if (selectedSortingOptions.value === "highToLow") {
+        filteredProductsCopy.sort((a, b) => b.price - a.price);
       }
-    });
-  }, [selectedCategory, products]);
+    }
+
+    setFilteredProductsCopy(filteredProductsCopy);
+  }, [selectedCategory, selectedYearOptions, selectedSortingOptions, selectedShippingOptions, products]);
+
+  const filteredProducts = useMemo(() => {
+    return filteredProductsCopy.slice(startIndex, endIndex);
+  }, [filteredProductsCopy, startIndex, endIndex]);
 
   useEffect(() => {
-    setUpdatedProducts(filteredProducts.slice(startIndex, endIndex));
+    setUpdatedProducts(filteredProducts);
   }, [filteredProducts, startIndex, endIndex]);
 
-
-  // Set next/prev page + scroll to on top of products
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
 
@@ -57,21 +104,27 @@ const Items = () => {
         targetElement.getBoundingClientRect().top + window.scrollY - 100;
       window.scrollTo({
         top: targetPosition,
-        behavior: "smooth",
       });
     }
   };
-  const handleFilterChange = (selectedFilters) => {
-    console.log(selectedFilters);
-    console.log(filteredProducts.length)
-  };
+
+  const handleFilterChange = useCallback((selectedFilters) => {
+    const { yearOptions, shippingOptions } = selectedFilters;
+    setSelectedYearOptions(yearOptions);
+    setSelectedShippingOptions(shippingOptions);
+    setCurrentPage(1);
+  }, []);
 
   return (
     <>
-      <ProductSorting onFilterChange={handleFilterChange} />
+      <ProductSorting
+        onFilterChange={handleFilterChange}
+        onSortChange={handleSortChange}
+        onShippingChange={handleShippingChange}
+      />
       <div
         id="startHandler"
-        className={`container px-0 sm:px-5 mx-auto  md:px-20 flex gap-3 ${
+        className={`container px-0 sm:px-5 mx-auto md:px-20 flex gap-3 ${
           isCategorySelectorHidden ? "flex-col" : "flex-row"
         }`}
       >
@@ -83,6 +136,12 @@ const Items = () => {
             isCategorySelectorHidden ? "w-full p-4" : "w-3/4"
           }`}
         >
+          {updatedProducts.length === 0 && (
+            <div className="col-span-3 text-white text-center p-8">
+              No products found. Please change the category or apply different filters.
+            </div>
+          )}
+
           {updatedProducts.map((product) => (
             <div
               key={product.id}
@@ -93,6 +152,7 @@ const Items = () => {
               <img src={product.src} alt={product.alt} className="w-full" />
               <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
               <p className="text-white">${product.price}</p>
+              <p className="text-white">{`Shipping: ${product.delivery_type}`}</p>
               <button className="bg-gray-800 text-white rounded px-4 py-2 mt-2">
                 Add to cart
               </button>
@@ -103,7 +163,7 @@ const Items = () => {
       <StorePagination
         currentPage={currentPage}
         productsPerPage={productsPerPage}
-        totalProducts={filteredProducts.length}
+        totalProducts={filteredProductsCopy.length}
         onPageChange={handlePageChange}
       />
     </>
