@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import CategorySelector from "./CategorySelector";
 import StorePagination from "./StorePagination";
 import ProductSorting from "./ProductSorting";
+import SearchBar from "./SearchBar";
 import { products } from "../../lib/Constants";
 
 const Items = () => {
@@ -13,7 +14,12 @@ const Items = () => {
   const [selectedShippingOptions, setSelectedShippingOptions] = useState(null);
   const [filteredProductsCopy, setFilteredProductsCopy] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState("");
   const productsPerPage = 16;
+
+  const handleSearch = useCallback((query) => {
+    setSearchQuery(query);
+  }, []);
 
   const handleSelectCategory = (categoryName) => {
     setSelectedCategory(categoryName);
@@ -22,11 +28,6 @@ const Items = () => {
 
   const handleSortChange = (selectedSortOption) => {
     setSelectedSortingOptions(selectedSortOption);
-    setCurrentPage(1);
-  };
-
-  const handleShippingChange = (selectedShippingOption) => {
-    setSelectedShippingOptions(selectedShippingOption);
     setCurrentPage(1);
   };
 
@@ -49,13 +50,25 @@ const Items = () => {
 
   useEffect(() => {
     let filteredProductsCopy = [...products];
+    // Searchbar
+    if (searchQuery) {
+      const searchTerms = searchQuery.toLowerCase().split(" ");
+  
+      filteredProductsCopy = filteredProductsCopy.filter((product) =>
+        searchTerms.every((term) =>
+          product.name.toLowerCase().includes(term)
+        )
+      );
+    }
 
+    // Category
     if (selectedCategory && selectedCategory !== "") {
       filteredProductsCopy = filteredProductsCopy.filter(
         (product) => product.category === selectedCategory
       );
     }
 
+    // Year
     if (selectedYearOptions && selectedYearOptions.length > 0) {
       filteredProductsCopy = filteredProductsCopy.filter((product) =>
         selectedYearOptions.some(
@@ -66,16 +79,26 @@ const Items = () => {
       );
     }
 
+    // Delivery type 
     if (selectedShippingOptions && selectedShippingOptions.length > 0) {
       filteredProductsCopy = filteredProductsCopy.filter((product) =>
-        selectedShippingOptions.some(
-          (option) =>
-            option.value === product.delivery_type &&
-            (!selectedCategory || product.category === selectedCategory)
-        )
+        Array.isArray(product.delivery_type)
+          ? product.delivery_type.some((type) =>
+              selectedShippingOptions.some(
+                (option) =>
+                  option.value === type &&
+                  (!selectedCategory || product.category === selectedCategory)
+              )
+            )
+          : selectedShippingOptions.some(
+              (option) =>
+                option.value === product.delivery_type &&
+                (!selectedCategory || product.category === selectedCategory)
+            )
       );
     }
 
+    // Sort price
     if (selectedSortingOptions) {
       if (selectedSortingOptions.value === "lowToHigh") {
         filteredProductsCopy.sort((a, b) => a.price - b.price);
@@ -85,7 +108,14 @@ const Items = () => {
     }
 
     setFilteredProductsCopy(filteredProductsCopy);
-  }, [selectedCategory, selectedYearOptions, selectedSortingOptions, selectedShippingOptions, products]);
+  }, [
+    searchQuery,
+    selectedCategory,
+    selectedYearOptions,
+    selectedSortingOptions,
+    selectedShippingOptions,
+    products,
+  ]);
 
   const filteredProducts = useMemo(() => {
     return filteredProductsCopy.slice(startIndex, endIndex);
@@ -117,10 +147,10 @@ const Items = () => {
 
   return (
     <>
+      <SearchBar onSearch={handleSearch} />
       <ProductSorting
         onFilterChange={handleFilterChange}
         onSortChange={handleSortChange}
-        onShippingChange={handleShippingChange}
       />
       <div
         id="startHandler"
@@ -138,7 +168,8 @@ const Items = () => {
         >
           {updatedProducts.length === 0 && (
             <div className="col-span-3 text-white text-center p-8">
-              No products found. Please change the category or apply different filters.
+              No products found. Please change the category or apply different
+              filters.
             </div>
           )}
 

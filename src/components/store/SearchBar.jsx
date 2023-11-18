@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
   const [searchText, setSearchText] = useState("");
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [animatedPlaceholder, setAnimatedPlaceholder] = useState("");
   const [placeholderTimeout, setPlaceholderTimeout] = useState(null);
 
-
-  // Add white-space delay
   const placeholderSuggestions = [
     "Guitar  ",
     "Soundy cup  ",
-    "Blouse  ", 
+    "Blouse  ",
     "Music CD  ",
     "Music souvenirs  ",
     "Classical guitar  ",
@@ -25,7 +23,6 @@ const SearchBar = () => {
     let animationInterval;
     let reverse = false;
 
-    // Type letters
     const animatePlaceholder = () => {
       const currentPlaceholder = placeholderSuggestions[placeholderIndex];
       if (currentLetterIndex < currentPlaceholder.length && !reverse) {
@@ -44,28 +41,35 @@ const SearchBar = () => {
           currentLetterIndex = 0;
           clearInterval(animationInterval);
 
-          // Set a timeout to switch to the next placeholder
           setPlaceholderTimeout(
             setTimeout(() => {
-              setPlaceholderIndex((prevIndex) =>
-                (prevIndex + 1) % placeholderSuggestions.length
+              setPlaceholderIndex(
+                (prevIndex) => (prevIndex + 1) % placeholderSuggestions.length
               );
-            }, 300) 
+            }, 300)
           );
         }
       } else {
         reverse = true;
       }
     };
-
     // 100ms between each letter
-    animationInterval = setInterval(animatePlaceholder, 100); 
+    animationInterval = setInterval(animatePlaceholder, 100);
 
     return () => {
       clearInterval(animationInterval);
       clearTimeout(placeholderTimeout);
     };
   }, [placeholderIndex]);
+
+  useEffect(() => {
+    // Add a delay of 300 milliseconds after typing
+    const searchTimeout = setTimeout(() => {
+      onSearch(searchText);
+    }, 300);
+
+    return () => clearTimeout(searchTimeout);
+  }, [searchText, onSearch]);
 
   return (
     <div className="text-gray-600 container px-2 sm:px-20 py-10 mx-auto md:block">

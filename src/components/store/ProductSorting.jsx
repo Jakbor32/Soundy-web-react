@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
-const ProductSorting = ({ onFilterChange, onSortChange, onShippingChange }) => {
+const ProductSorting = ({ onFilterChange, onSortChange }) => {
   const [selectedSortingOption, setSelectedSortingOption] = useState(null);
   const [selectedYearOptions, setSelectedYearOptions] = useState("");
   const [selectedShippingOptions, setSelectedShippingOptions] = useState("");
@@ -18,11 +18,11 @@ const ProductSorting = ({ onFilterChange, onSortChange, onShippingChange }) => {
   }
 
   const shippingOptions = [
-    { value: "parcelLocker", label: "Parcel Locker" },
-    { value: "courier", label: "Courier" },
-    { value: "post", label: "Post" },
-    { value: "express", label: "Express" },
-    { value: "pickup", label: "Pickup" },
+    { value: "Parcel Locker", label: "Parcel Locker" },
+    { value: "Courier", label: "Courier" },
+    { value: "Post", label: "Post" },
+    { value: "Express", label: "Express" },
+    { value: "Pickup", label: "Pickup" },
   ];
 
   const handleFilterChange = () => {
