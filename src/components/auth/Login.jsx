@@ -9,7 +9,7 @@ function LoginButton() {
     !isAuthenticated && (
       <button
         onClick={loginWithRedirect}
-        className="mr-2 py-2 pl-1 pr-2 text-[0.65rem] font-bold tracking-wider md:text-xs border flex gap-2 items-center"
+        className="mr-2 py-2 pl-1 pr-2 text-[0.65rem] font-bold tracking-wider md:text-xs border flex gap-2 items-center active:scale-95"
       >
         {icons[1].lock}
         Login
