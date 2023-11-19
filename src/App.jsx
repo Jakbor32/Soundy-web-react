@@ -19,7 +19,6 @@ const App = () => (
     </Helmet>
     <CartProvider>
       <Navbar />
-    </CartProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,6 +29,7 @@ const App = () => (
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
+    </CartProvider>
     <Footer />
   </>
 );

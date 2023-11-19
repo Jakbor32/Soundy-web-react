@@ -9,7 +9,7 @@ function LogoutButton() {
   return (
     isAuthenticated && (
       <button
-        className="mr-2 py-2 pl-2 pr-2 text-[0.65rem] font-bold tracking-wider md:text-xs border flex gap-2 items-center"
+        className="mr-2 py-2 pl-2 pr-2 text-[0.65rem] font-bold tracking-wider md:text-xs border flex gap-2 items-center active:scale-95"
         onClick={() => {
           logout({
             logoutParams: {

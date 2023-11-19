@@ -4,6 +4,10 @@ import StorePagination from "./StorePagination";
 import ProductSorting from "./ProductSorting";
 import SearchBar from "./SearchBar";
 import { products } from "../../lib/Constants";
+import { useCartContext } from "../cart/CartContext";
+import toast from "react-hot-toast";
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "../auth/Login";
 
 const Items = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -15,7 +19,48 @@ const Items = () => {
   const [filteredProductsCopy, setFilteredProductsCopy] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
+  const { isAuthenticated } = useAuth0();
   const productsPerPage = 16;
+
+  // Toast
+
+  const notifyProductAddedToCart = () => {
+    toast("Product added to cart", {
+      duration: 3000,
+      position: "top-right",
+      style: {
+        background: "#006400",
+        color: "#fff",
+        fontSize: "1rem",
+      },
+    });
+  };
+
+  const notifyProductNotAddedToCart = () => {
+    toast(newToast, {
+      duration: 3000,
+      position: "top-center",
+      style: {
+        background: "#8B0000",
+        color: "#fff",
+        fontSize: "1rem",
+      },
+    });
+  };
+
+  const newToast = () => (
+    <div className="mx-2 py-2">
+      <p className="text-center text-xl pb-2">Error</p>
+      <p className="text-sm pb-1">Product has not been added to your cart:</p>
+      <ul className="text-sm">
+        <li>- Please ensure you are logged in</li>
+        <li>- There was a processing error</li>
+      </ul>
+      <div className="flex justify-center pt-4">
+        {isAuthenticated ? "" : <LoginButton />}
+      </div>
+    </div>
+  );
 
   const handleSearch = useCallback((query) => {
     setSearchQuery(query);
@@ -53,11 +98,9 @@ const Items = () => {
     // Searchbar
     if (searchQuery) {
       const searchTerms = searchQuery.toLowerCase().split(" ");
-  
+
       filteredProductsCopy = filteredProductsCopy.filter((product) =>
-        searchTerms.every((term) =>
-          product.name.toLowerCase().includes(term)
-        )
+        searchTerms.every((term) => product.name.toLowerCase().includes(term))
       );
     }
 
@@ -79,7 +122,7 @@ const Items = () => {
       );
     }
 
-    // Delivery type 
+    // Delivery type
     if (selectedShippingOptions && selectedShippingOptions.length > 0) {
       filteredProductsCopy = filteredProductsCopy.filter((product) =>
         Array.isArray(product.delivery_type)
@@ -145,6 +188,17 @@ const Items = () => {
     setCurrentPage(1);
   }, []);
 
+  // Add to cart
+  const { addToCart } = useCartContext();
+
+  const handleAddToCart = (product) => {
+    if (isAuthenticated) {
+      addToCart(product);
+      notifyProductAddedToCart();
+    } else {
+      notifyProductNotAddedToCart();
+    }
+  };
   return (
     <>
       <SearchBar onSearch={handleSearch} />
@@ -176,15 +230,20 @@ const Items = () => {
           {updatedProducts.map((product) => (
             <div
               key={product.id}
-              className={`bg-stone-700 shadow-md p-4 rounded-lg ${
+              className={`bg-slate-700 shadow-md p-4 rounded-lg text-white ${
                 updatedProducts.length < 5 ? "h-fit" : "h-full"
               }`}
             >
               <img src={product.src} alt={product.alt} className="w-full" />
-              <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
-              <p className="text-white">${product.price}</p>
-              <p className="text-white">{`Shipping: ${product.delivery_type}`}</p>
-              <button className="bg-gray-800 text-white rounded px-4 py-2 mt-2">
+              <h3 className="text-lg font-semibold mt-2 text">
+                {product.name}
+              </h3>
+              <p>${product.price}</p>
+              <p>{`Shipping: ${product.delivery_type}`}</p>
+              <button
+                onClick={() => handleAddToCart(product)}
+                className="bg-gray-800 text-white rounded px-4 py-2 mt-2 hover:bg-gray-900 active:scale-90"
+              >
                 Add to cart
               </button>
             </div>
