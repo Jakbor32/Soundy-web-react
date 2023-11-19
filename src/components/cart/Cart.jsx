@@ -10,8 +10,30 @@ const Cart = ({ openCart, setOpenCart }) => {
   const cartRef = useRef(null);
   const [currentStepCart, setCurrentStepCart] = useState(0);
   const { cartItems } = useCartContext();
+  const [couponCode, setCouponCode] = useState("");
+  const [couponApplied, setCouponApplied] = useState(false);
+  const [couponAccepted, setCouponAccepted] = useState(false);
+  const [giftWrapApplied, setGiftWrapApplied] = useState(false);
+  const [isCouponValid, setIsCouponValid] = useState(true);
 
   const { isAuthenticated } = useAuth0();
+
+  useEffect(() => {
+    // Check if the entered coupon code is valid
+    if (couponCode === "#Borka") {
+      setIsCouponValid(true);
+      setCouponAccepted(true);
+      setCouponApplied(true); // Automatically apply the coupon
+    } else {
+      setIsCouponValid(false);
+      setCouponAccepted(false);
+      setCouponApplied(false); // Ensure coupon is not applied if invalid
+    }
+  }, [couponCode]);
+
+  const handleGiftWrapClick = () => {
+    setGiftWrapApplied(!giftWrapApplied);
+  };
 
   // Close the cart with animate
   const closeCart = () => {
@@ -35,6 +57,24 @@ const Cart = ({ openCart, setOpenCart }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, [setOpenCart]);
+
+  const calculateTotalAmount = () => {
+    let totalAmount = cartItems.reduce(
+      (total, product) => total + product.price * product.quantity,
+      0
+    );
+    if (giftWrapApplied) {
+      totalAmount += 20;
+    }
+
+    if (couponApplied) {
+      // Apply a 10% discount if the coupon is applied
+      totalAmount *= 0.9;
+    }
+
+    return totalAmount.toFixed(2);
+  };
+
   return (
     <>
       <div
@@ -56,11 +96,14 @@ const Cart = ({ openCart, setOpenCart }) => {
           </div>
           {!isAuthenticated && (
             <div>
-          <p className="flex flex-col items-center justify-center w-full px-5 mt-20 text-center sm:px-10">Access to this section is restricted to logged-in users only. Please log in or sign in to view the content.</p>
-          <div className="flex justify-center mt-5">
-          <LoginButton />
-          </div>
-          </div>
+              <p className="flex flex-col items-center justify-center w-full px-5 mt-20 text-center sm:px-10">
+                Access to this section is restricted to logged-in users only.
+                Please log in or sign in to view the content.
+              </p>
+              <div className="flex justify-center mt-5">
+                <LoginButton />
+              </div>
+            </div>
           )}
           {isAuthenticated && (
             <div>
@@ -73,7 +116,9 @@ const Cart = ({ openCart, setOpenCart }) => {
                       Your cart is empty
                     </p>
                   ) : (
-                    cartItems.map((item, index) => <CartItem key={index} />)
+                    cartItems.map((product, index) => (
+                      <CartItem key={index} product={product} />
+                    ))
                   )}
                 </div>
               </div>
@@ -82,9 +127,35 @@ const Cart = ({ openCart, setOpenCart }) => {
                   {cartItems.length === 0 ? null : (
                     <>
                       <p className="pb-3">Coupons</p>
-                      <div className="flex justify-between p-3 border rounded-lg">
+                      <div className="flex justify-between p-3 border rounded-lg items-center">
                         <div>Enter your coupon code</div>
-                        <input type="text" className="w-20 px-2 text-black" />
+                        <div className="flex items-center gap-3">
+                          {couponCode && (
+                            <p
+                              className={` text-sm ${
+                                isCouponValid
+                                  ? "text-green-500"
+                                  : "text-red-500"
+                              }`}
+                            >
+                              {isCouponValid
+                                ? "Coupon accepted"
+                                : "Invalid coupon"}
+                            </p>
+                          )}
+                          <div className="flex items-center">
+                            <input
+                              type="text"
+                              value={couponCode}
+                              onChange={(e) => setCouponCode(e.target.value)}
+                              className={`w-20 px-2 text-black ${
+                                couponAccepted
+                                  ? "border-green-500"
+                                  : "border-red-500"
+                              }`}
+                            />
+                          </div>
+                        </div>
                       </div>
                     </>
                   )}
@@ -93,11 +164,18 @@ const Cart = ({ openCart, setOpenCart }) => {
                   {cartItems.length === 0 ? null : (
                     <>
                       <p className="pb-3">Gifting</p>
-                      <div className="flex flex-col justify-between p-3 border rounded-lg bg-slate-500">
+                      <div className="flex flex-col justify-between p-3 border rounded-lg bg-slate-700">
                         <div>Buying for a loved one</div>
                         <div>Send personalized message at $20</div>
-                        <a className="text-green-600" href="">
-                          Add gift wrap
+                        <a
+                          onClick={handleGiftWrapClick}
+                          className={`${
+                            giftWrapApplied ? "text-red-300" : "text-green-300"
+                          } cursor-pointer`}
+                        >
+                          {giftWrapApplied
+                            ? "Remove gift wrap"
+                            : "Add gift wrap"}
                         </a>
                       </div>
                     </>
@@ -107,16 +185,46 @@ const Cart = ({ openCart, setOpenCart }) => {
                   {cartItems.length === 0 ? null : (
                     <div>
                       <p className="pb-3">Price Details</p>
-                      <div className="flex flex-col justify-between p-3 border rounded-lg bg-slate-500">
-                        <div>1 item</div>
-                        <div className="flex justify-between">
-                          <div>Name of item</div>
-                          <div>$45.20</div>
+                      <div className="flex flex-col justify-between p-3 border rounded-lg bg-slate-700">
+                        <div>
+                          {cartItems.length} item
+                          {cartItems.length > 1 ? "s" : ""}
                         </div>
-                        <div className="flex justify-between">
-                          <div>Coupon discount</div>
-                          <div>$2.50</div>
-                        </div>
+                        {cartItems.map((product, index) => (
+                          <div key={index} className="flex justify-between">
+                            <div className="flex gap-3">
+                              <div>{product.name}</div>
+                              <div className="text-blue-300">
+                                x{product.quantity}
+                              </div>
+                            </div>
+                            <div>
+                              ${(product.price * product.quantity).toFixed(2)}
+                            </div>
+                          </div>
+                        ))}
+                        {isCouponValid && couponAccepted && (
+                          <div className="flex justify-between">
+                            <div>Coupon discount -10%</div>
+                            <div>
+                              -$
+                              {(
+                                cartItems.reduce(
+                                  (total, product) =>
+                                    total + product.price * product.quantity,
+                                  0
+                                ) * 0.1
+                              ).toFixed(2)}
+                            </div>
+                          </div>
+                        )}
+
+                        {giftWrapApplied && (
+                          <div className="flex justify-between">
+                            <div>Gift Wrap</div>
+                            <div>$20</div>
+                          </div>
+                        )}
                         <div className="flex justify-between">
                           <div>Delivery Charges</div>
                           <div>Free Delivery</div>
@@ -126,10 +234,12 @@ const Cart = ({ openCart, setOpenCart }) => {
                         <br />
                         <div className="flex justify-between">
                           <div>Total Amount</div>
-                          <div>$43.20</div>
+                          <div className="text-xl">
+                            ${calculateTotalAmount()}
+                          </div>
                         </div>
                       </div>
-                      <button className="w-full px-5 py-3 mt-10 mb-24 bg-gray-700 border-2 rounded-lg">
+                      <button className="w-full px-5 py-3 mt-10 mb-24 bg-gray-800 border-2 rounded-lg active:scale-95">
                         Place order
                       </button>
                     </div>
