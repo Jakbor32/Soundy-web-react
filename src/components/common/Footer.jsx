@@ -44,7 +44,7 @@ const Footer = () => {
              <SubscriptionMailer />
           </div>
         </div>
-        <hr class="mx-3 my-8 h-px border-0 bg-zinc-700" />
+        <hr className="mx-3 my-8 h-px border-0 bg-zinc-700" />
         <div className="flex flex-col items-center justify-between gap-4 px-3 sm:flex-row sm:gap-0">
           {copyrightText}
           <div className="flex justify-center gap-4 opacity-50 ">

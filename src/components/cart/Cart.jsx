@@ -239,7 +239,8 @@ const Cart = ({ openCart, setOpenCart }) => {
                           </div>
                         </div>
                       </div>
-                      <button className="w-full px-5 py-3 mt-10 mb-24 bg-gray-800 border-2 rounded-lg active:scale-95">
+                      <button className="w-full px-5 py-3 mt-10 mb-24 bg-gray-800 border-2 rounded-lg active:scale-95"
+                      onClick={() => setCurrentStepCart(1)}>
                         Place order
                       </button>
                     </div>

@@ -9,13 +9,13 @@ const SearchBar = ({ onSearch }) => {
 
   const placeholderSuggestions = [
     "Guitar  ",
-    "Soundy cup  ",
-    "Blouse  ",
-    "Music CD  ",
-    "Music souvenirs  ",
+    "Soundy mug  ",
+    "T-shirt  ",
+    "Vinyl records  ",
+    "Souvenir  ",
     "Classical guitar  ",
     "Electric guitar  ",
-    "Soundy hat  ",
+    "Headphones  ",
   ];
 
   useEffect(() => {

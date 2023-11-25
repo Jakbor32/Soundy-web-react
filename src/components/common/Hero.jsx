@@ -22,7 +22,7 @@ const Hero = () => {
           {subTitle}
         </p>
         <div className="flex flex-wrap justify-center mt-5 mb-0 md:my-3 md:justify-start">
-          <Button to="/store">{links.store.text}</Button>
+          <Button to="store">{links.store.text}</Button>
           <Button to="#newsletter" border={false}>
             {links.newsletter.text}
           </Button>

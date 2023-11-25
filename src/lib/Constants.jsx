@@ -188,7 +188,7 @@ export const footerLinks = [
   {
     id: "contact",
     label: "Contact",
-    url: "#contact",
+    url: "/#contact",
   },
 ];
 

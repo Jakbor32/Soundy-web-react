@@ -59,9 +59,9 @@ const SubscriptionMailer = () => {
   };
 
   return (
-    <div class="w-full lg:w-[24rem] lg:px-0 xl:w-[32rem]">
+    <div className="w-full lg:w-[24rem] lg:px-0 xl:w-[32rem]">
       <form onSubmit={subscriptionSend}>
-        <div class="relative flex flex-col items-center gap-5 sm:flex-row sm:gap-0">
+        <div className="relative flex flex-col items-center gap-5 sm:flex-row sm:gap-0">
           <input
             type="email"
             name={email}

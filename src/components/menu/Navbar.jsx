@@ -28,9 +28,10 @@ const Navbar = () => {
       if (currentScrollPos > prevScrollPos) {
         setScrolled(false);
       } else {
-        setScrolled(true);
+        if (prevScrollPos - currentScrollPos >= 15) {
+          setScrolled(true);
+        }
       }
-
       if (prevScrollPos < 100) {
         setScrolled(false);
       }
@@ -45,7 +46,7 @@ const Navbar = () => {
     };
   }, [prevScrollPos, setScrolled]);
 
-  // Body overflow control + add scroll width 
+  // Body overflow control + add scroll width
   useEffect(() => {
     const scrollbarWidth =
       window.innerWidth - document.documentElement.clientWidth;
