@@ -3,14 +3,16 @@ import { useCartContext } from "./CartContext";
 
 const CartItem = ({ product }) => {
   const { name, price, src, alt, production_year, quantity } = product;
-  const { addToCart, removeFromCart, removeProduct } = useCartContext();
+  const { addToCart, removeProduct } = useCartContext();
 
+  // Decrease by 1
   const handleDecrease = () => {
     if (quantity > 1) {
-      removeFromCart(product.id);
+      addToCart(product, -1);
     }
   };
 
+  // Increase by 1
   const handleIncrease = () => {
     addToCart(product, 1);
   };
