@@ -1,4 +1,9 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import useFirebaseEffects from "../../hooks/useFirebaseEffects";
+import { deleteDocument } from "../../config/FirebaseUtils";
+import useFetchProducts from "../../hooks/useFetchProducts";
+
 const CartContext = createContext();
 
 export const useCartContext = () => {
@@ -7,6 +12,7 @@ export const useCartContext = () => {
 
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const { user, isAuthenticated } = useAuth0();
 
   const addToCart = (product, quantity = 1) => {
     const existingItemIndex = cartItems.findIndex(
@@ -22,36 +28,58 @@ const CartProvider = ({ children }) => {
     }
   };
 
-  const removeFromCart = (productId, quantity = 1) => {
-    const existingItemIndex = cartItems.findIndex(
-      (item) => item.id === productId
-    );
+  const removeDoc = async (productId) => {
+    if (isAuthenticated) {
+      const userId = getUserId();
+      const docRef = `${userId}/${productId}`;
 
-    if (existingItemIndex !== -1) {
-      const updatedCartItems = [...cartItems];
-      updatedCartItems[existingItemIndex].quantity -= quantity;
-
-      if (updatedCartItems[existingItemIndex].quantity < 0) {
-        updatedCartItems[existingItemIndex].quantity = 0;
+      try {
+        await deleteDocument(docRef);
+      } catch (error) {
+        console.error(error);
       }
-
-      if (updatedCartItems[existingItemIndex].quantity === 0) {
-        updatedCartItems.splice(existingItemIndex, 1);
-      }
-
-      setCartItems(updatedCartItems);
     }
   };
 
   const removeProduct = (productId) => {
-    const updatedCartItems = cartItems.filter((item) => item.id !== productId);
-    setCartItems(updatedCartItems);
+    const itemToRemove = cartItems.find((item) => item.id === productId);
+
+    if (itemToRemove) {
+      const uidToRemove = itemToRemove.uid;
+
+      const updatedCartItems = cartItems.filter(
+        (item) => item.id !== productId
+      );
+      setCartItems(updatedCartItems);
+
+      removeDoc(uidToRemove);
+    }
   };
 
+  const getUserId = () => {
+    const userId = JSON.stringify(user.sub);
+    return isAuthenticated && userId;
+  };
+
+  useFirebaseEffects(cartItems, isAuthenticated, getUserId);
+
+  const fetchProductsFromDatabase = async () => {
+    try {
+      const userId = getUserId();
+      const products = await useFetchProducts(userId);
+      setCartItems(products);
+    } catch (error) {
+      console.error("Error fetching products from the database: ", error);
+    }
+  };
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchProductsFromDatabase();
+    }
+  }, [isAuthenticated]);
+
   return (
-    <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, removeProduct }}
-    >
+    <CartContext.Provider value={{ cartItems, addToCart, removeProduct }}>
       {children}
     </CartContext.Provider>
   );
