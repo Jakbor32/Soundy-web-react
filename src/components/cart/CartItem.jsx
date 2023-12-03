@@ -28,7 +28,7 @@ const CartItem = ({ product }) => {
       </div>
       <div className="flex flex-col justify-between w-full pt-3 pb-3 pr-4 text-sm text-white">
         <div>
-          <div className="flex justify-between text-lg">
+          <div className="flex justify-between text-sm sm:text-lg">
             <p>{name}</p>
             <div
               onClick={handleRemove}
@@ -38,21 +38,21 @@ const CartItem = ({ product }) => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between text-lg text-yellow-500">
+        <div className="flex items-center justify-between sm:text-lg text-yellow-500">
           <p>${price}</p>
         </div>
         <div className="flex justify-between">
-          <div>Year: {production_year}</div>
+          <div className="text-xs sm:text-sm">Year: {production_year}</div>
           <div className="flex items-center gap-2 -mt-4">
             <button
-              className="w-7 h-7 bg-black rounded text-white text-xl font-semibold"
+              className="sm:w-7 sm:h-7 w-5 h-5 bg-black rounded text-white sm:text-xl font-semibold"
               onClick={handleDecrease}
             >
               -
             </button>
-            <div className="text-xl font-semibold">{quantity}</div>
+            <div className="sm:text-xl font-semibold">{quantity}</div>
             <button
-              className="w-7 h-7 bg-black rounded text-white text-xl font-semibold"
+              className="sm:w-7 sm:h-7 w-5 h-5 bg-black rounded text-white sm:text-xl font-semibold"
               onClick={handleIncrease}
             >
               +

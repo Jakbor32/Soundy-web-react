@@ -27,7 +27,7 @@ const Items = () => {
   const notifyProductAddedToCart = () => {
     toast("Product added to cart", {
       duration: 3000,
-      position: "top-right",
+      position: "top-left",
       style: {
         background: "#006400",
         color: "#fff",
