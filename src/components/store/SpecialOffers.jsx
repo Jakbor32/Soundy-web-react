@@ -94,14 +94,9 @@ const SpecialOffers = () => {
                 <div className="flex items-center justify-between top-5 relative gap-2">
                   <div className="text-white text-2xl">{item.price}</div>
                   <div className="flex justify-end gap-3 items-center">
-                    <button className="bg-stone-600 hover:bg-stone-400 font-bold py-2 px-5">
-                      Buy
+                    <button className="relative bg-stone-600 font-bold py-2 px-5 text-white opacity-40 cursor-not-allowed" disabled>
+                      Sold-out
                     </button>
-                    <div className="cursor-pointer flex items-center">
-                      <span className="text-xl pr-5">
-                        <AiOutlineShoppingCart size={32} color="white" />
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>

@@ -731,24 +731,7 @@ export const cities = [
 
 // Store
 
-export const newCollection = [
-  {
-    id: 0,
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Promotion-guitar-red-soundy.png?alt=media&token=734ae0fa-fedf-4ae3-80ae-e203355f42b2&_gl=1*18eq6qd*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5OTE4MjY2MC4xNy4xLjE2OTkxODI2ODkuMzEuMC4w",
-    imageAlt: "Red guitar",
-    price: "300",
-    desc: "Taylor 814ce Acoustic Guitar",
-  },
-  {
-    id: 1,
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Promotion-guitar-purple-soundy.png?alt=media&token=0d6f8405-de9b-40de-971c-da68a2313db5&_gl=1*sp9sgu*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5OTE4MjY2MC4xNy4xLjE2OTkxODMzMTAuNTQuMC4w",
-    imageAlt: "Purlple guitar",
-    price: "450",
-    desc: "Fender Strato Retro Guitar",
-  },
-];
+
 
 export const specialOffers = [
   {
@@ -1290,5 +1273,29 @@ export const products = [
     category: "Official Soundy Products",
     production_year: "2015",
     delivery_type: "Parcel Locker",
+  },
+  {
+    id: 45,
+    name: "Taylor 814ce Acoustic Guitar",
+    price: 300,
+    src:
+      "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Promotion-guitar-red-soundy.png?alt=media&token=734ae0fa-fedf-4ae3-80ae-e203355f42b2&_gl=1*18eq6qd*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5OTE4MjY2MC4xNy4xLjE2OTkxODI2ODkuMzEuMC4w",
+      uid: "WW33XC",
+    alt: "Red guitar",
+    category: "Guitars",
+    production_year: "2012",
+    delivery_type: "Pickup",
+  },
+  {
+    id: 46,
+    name: "Fender Strato Retro Guitar",
+    price: 450,
+    src:
+    "https://firebasestorage.googleapis.com/v0/b/soundy-web-react.appspot.com/o/Promotion-guitar-purple-soundy.png?alt=media&token=0d6f8405-de9b-40de-971c-da68a2313db5&_gl=1*sp9sgu*_ga*MTQxMDU3Mjg0Ni4xNjkxNDQyMDYz*_ga_CW55HF8NVT*MTY5OTE4MjY2MC4xNy4xLjE2OTkxODMzMTAuNTQuMC4w",
+    uid: "AA31XP",
+    alt: "Purlple guitar",
+    category: "Guitars",
+    production_year: "2010",
+    delivery_type: "Pickup",
   },
 ];

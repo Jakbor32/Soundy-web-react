@@ -94,7 +94,9 @@ const Items = () => {
   const endIndex = startIndex + productsPerPage;
 
   useEffect(() => {
-    let filteredProductsCopy = [...products];
+    const allProducts = products.slice(0, -2);
+    
+    let filteredProductsCopy = [...allProducts];
     // Searchbar
     if (searchQuery) {
       const searchTerms = searchQuery.toLowerCase().split(" ");

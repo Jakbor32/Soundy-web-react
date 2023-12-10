@@ -20,7 +20,6 @@ import ConcertView from "./tour/ConcertView";
 import SearchBar from "./store/SearchBar";
 import CategorySelector from "./store/CategorySelector";
 import NewCollection from "./store/NewCollection";
-import StoreDescription from "./store/StoreDescription";
 import ProductSorting from "./store/ProductSorting";
 import SpecialOffers from "./store/SpecialOffers";
 import Benefits from "./store/Benefits";
@@ -51,7 +50,6 @@ export {
   SearchBar,
   CategorySelector,
   NewCollection,
-  StoreDescription,
   ProductSorting,
   SpecialOffers,
   Benefits,

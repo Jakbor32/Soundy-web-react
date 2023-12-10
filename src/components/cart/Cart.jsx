@@ -12,6 +12,17 @@ const Cart = ({ openCart, setOpenCart }) => {
   const [couponAccepted, setCouponAccepted] = useState(false);
   const [giftWrapApplied, setGiftWrapApplied] = useState(false);
   const [isCouponValid, setIsCouponValid] = useState(true);
+  const [address, setAddress] = useState({
+    street: "",
+    city: "",
+    zipCode: "",
+    name: "",
+    surname: "",
+    email: "",
+    country: "",
+    remarks: "",
+
+  });
 
   const { isAuthenticated } = useAuth0();
 
@@ -89,6 +100,8 @@ const Cart = ({ openCart, setOpenCart }) => {
         giftWrapApplied={giftWrapApplied}
         calculateTotalAmount={calculateTotalAmount}
         setCurrentStepCart={setCurrentStepCart}
+        address={address}
+        setAddress={setAddress}
       />
       <div
         onClick={closeCart}
