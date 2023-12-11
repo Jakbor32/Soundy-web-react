@@ -3,6 +3,7 @@ import { products } from "../../lib/Constants";
 import { useAuth0 } from "@auth0/auth0-react";
 import toast from "react-hot-toast";
 import { useCartContext } from "../cart/CartContext";
+import LoginButton from "../auth/Login";
 
 const NewCollection = () => {
 
