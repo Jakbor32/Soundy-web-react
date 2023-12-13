@@ -41,12 +41,14 @@ const CartContent = ({
   };
 
   return (
+    <>
     <div
       ref={cartRef}
       className={`fixed right-0 top-0 z-40 h-screen w-full md:w-[40rem] overflow-y-auto bg-slate-950 pt-5 shadow-lg transition-transform duration-500 ${
         openCart ? "animate-slide-in-left" : "animate-slide-out-left"
       }`}
     >
+     
       <div
         openCart={openCart}
         className="fixed top-0 right-0 z-40 w-full md:w-[40rem] h-full pt-3 shadow-lg"
@@ -374,6 +376,11 @@ const CartContent = ({
         )}
       </div>
     </div>
+    <div
+        onClick={closeCart}
+        className="fixed top-0 right-0 w-screen h-screen bg-black opacity-80"
+      ></div>
+    </>
   );
 };
 

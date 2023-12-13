@@ -84,7 +84,6 @@ const Cart = ({ openCart, setOpenCart }) => {
   };
 
   return (
-    <>
       <CartContent
         openCart={openCart}
         cartRef={cartRef}
@@ -103,11 +102,6 @@ const Cart = ({ openCart, setOpenCart }) => {
         address={address}
         setAddress={setAddress}
       />
-      <div
-        onClick={closeCart}
-        className="fixed top-0 right-0 w-screen h-screen bg-black opacity-80"
-      ></div>
-    </>
   );
 };
 
