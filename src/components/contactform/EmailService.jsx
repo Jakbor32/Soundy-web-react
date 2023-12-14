@@ -162,7 +162,7 @@ const EmailService = () => {
       ))}
 
       <div className="sm:ml-10">
-        <button type="submit">
+        <button type="submit" aria-label="Send message">
           <AiOutlineSend size={50} className="cursor-pointer" />
         </button>
         <Toaster />

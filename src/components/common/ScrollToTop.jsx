@@ -46,6 +46,7 @@ const ScrollToTop = () => {
       <button
         className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 transform hover:scale-110 transition-transform"
         onClick={scrollTop}
+        aria-label="Scroll To Top"
       >
         <AiOutlineArrowUp size={24} />
       </button>

@@ -69,7 +69,7 @@ const Navbar = () => {
         scrolled
           ? "fixed top-0 z-10 w-full animate-slide-down  bg-black bg-opacity-40 backdrop-blur-sm backdrop-filter"
           : prevScrollPos < 1
-          ? "absolute animate-slide-down w-full z-10 top-0"
+          ? "fixed animate-slide-down w-full z-10 top-0"
           : "fixed top-0 z-10 w-full animate-slide-up  bg-black bg-opacity-40 backdrop-blur-sm backdrop-filter"
       } px-4 py-1.5 text-white md:px-6`}
     >

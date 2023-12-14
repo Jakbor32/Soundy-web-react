@@ -145,17 +145,17 @@ const MusicPlayer = ({ musicData }) => {
           <Toaster />
         </div>
         <div className="relative flex items-center justify-center mb-2">
-          <button onClick={skipPrevHandler} className="mr-2">
+          <button onClick={skipPrevHandler} className="mr-2" aria-label="Prev Song">
             <AiOutlineStepBackward className="w-10 h-10 text-white cursor-pointer" />
           </button>
-          <button onClick={playPauseHandler}>
+          <button onClick={playPauseHandler} aria-label="Pause Song">
             {isPlaying ? (
               <AiOutlinePause className="w-10 h-10 text-white cursor-pointer" />
             ) : (
               <AiOutlinePlayCircle className="w-10 h-10 text-white cursor-pointer" />
             )}
           </button>
-          <button onClick={skipNextHandler} className="ml-2">
+          <button onClick={skipNextHandler} className="ml-2" aria-label="Next Song">
             <AiOutlineStepForward className="w-10 h-10 text-white cursor-pointer" />
           </button>
         </div>

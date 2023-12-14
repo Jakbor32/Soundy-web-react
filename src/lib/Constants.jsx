@@ -68,22 +68,22 @@ export const socialLinks = [
   {
     id: "spotify",
     icon: <FaSpotify size={26} />,
-    url: "#",
+    url: "https://soundy-web-react.vercel.app",
   },
   {
     id: "facebook",
     icon: <FaFacebook size={26} />,
-    url: "#",
+    url: "https://soundy-web-react.vercel.app",
   },
   {
     id: "tiktok",
     icon: <FaTiktok size={26} />,
-    url: "#",
+    url: "https://soundy-web-react.vercel.app",
   },
   {
     id: "instagram",
     icon: <FaInstagram size={26} />,
-    url: "#",
+    url: "https://soundy-web-react.vercel.app",
   },
 ];
 

@@ -13,7 +13,7 @@ import SubscriptionMailer from "../contactform/SubscriptionMailer";
 
 const Footer = () => {
   return (
-    <footer className="py-10 bg-featuredFooterBg text-zinc-500">
+    <footer className="py-10 bg-featuredFooterBg text-zinc-400">
       <div className="container px-4 mx-auto lg:px-20 ">
         <div className="flex flex-col-reverse items-center justify-between gap-5 pt-10 lg:flex-row lg:gap-0">
           <div className="flex flex-col gap-5 lg:items-start">
@@ -47,7 +47,7 @@ const Footer = () => {
         <hr className="mx-3 my-8 h-px border-0 bg-zinc-700" />
         <div className="flex flex-col items-center justify-between gap-4 px-3 sm:flex-row sm:gap-0">
           {copyrightText}
-          <div className="flex justify-center gap-4 opacity-50 ">
+          <div className="flex justify-center gap-4 opacity-80 ">
             {socialLinks.map((link) => (
               <a key={link.id} href={link.url}>
                 {link.icon}

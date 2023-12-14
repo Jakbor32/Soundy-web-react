@@ -16,6 +16,7 @@ const App = () => (
     <Helmet>
       <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16} />
       <link rel="icon" type="image/x-icon" href={faviconICO} />
+      <link rel="sitemap" type="application/xml" title="Sitemap" href="..\public\sitemap.xml" />
     </Helmet>
     <CartProvider>
       <Navbar />

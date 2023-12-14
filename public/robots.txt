@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /.env
+Allow: /public/
+Sitemap: https://soundy-web-react.vercel.app/sitemap.xml

@@ -11,9 +11,9 @@ const Ticket = (props) => {
               </time>
             </div>
             <div className="flex flex-col uppercase">
-              <h4 className="text-sm text-yellow-600 md:text-2xl">
+              <p className="text-sm text-yellow-600 md:text-2xl">
                 {props.ticketEventName}
-              </h4>
+              </p>
               <p className="text-xs md:text-base">{props.ticketSubtitle}</p>
             </div>
           </div>
