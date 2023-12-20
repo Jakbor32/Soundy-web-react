@@ -78,7 +78,7 @@ const Navbar = () => {
           <button onClick={handleMenuOpen} className="md:hidden">
             {icons[3].bars}
           </button>
-          <a href="#" className="flex items-center">
+          <a href="https://soundy-web-react.vercel.app/" className="flex items-center">
             <img
               src={logo[0].path}
               className="mr-3 hidden h-8 min-[320px]:block md:h-10"
